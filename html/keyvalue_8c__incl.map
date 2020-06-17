@@ -1,0 +1,11 @@
+<map id="src/keyvalue.c" name="src/keyvalue.c">
+<area shape="rect" id="node1" title="mruby/c Key(Symbol) &#45; Value store." alt="" coords="160,5,267,32"/>
+<area shape="rect" id="node2" href="$vm__config_8h.html" title="Global configration of mruby/c VM&#39;s." alt="" coords="5,229,99,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="57,80,121,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="146,80,211,107"/>
+<area shape="rect" id="node5" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="217,155,281,181"/>
+<area shape="rect" id="node8" href="$alloc_8h.html" title="mrubyc memory management." alt="" coords="287,80,347,107"/>
+<area shape="rect" id="node9" href="$keyvalue_8h.html" title="mruby/c Key(Symbol) &#45; Value store." alt="" coords="372,80,457,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="186,229,251,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="276,229,345,256"/>
+</map>

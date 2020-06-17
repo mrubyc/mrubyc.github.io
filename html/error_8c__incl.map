@@ -1,0 +1,14 @@
+<map id="src/error.c" name="src/error.c">
+<area shape="rect" id="node1" title="exception classes" alt="" coords="385,5,465,32"/>
+<area shape="rect" id="node2" href="$vm__config_8h.html" title="Global configration of mruby/c VM&#39;s." alt="" coords="60,379,153,405"/>
+<area shape="rect" id="node3" title=" " alt="" coords="560,80,629,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="486,304,551,331"/>
+<area shape="rect" id="node5" href="$vm_8h.html" title="mruby bytecode executor." alt="" coords="252,80,303,107"/>
+<area shape="rect" id="node11" href="$error_8h.html" title="exception" alt="" coords="355,155,413,181"/>
+<area shape="rect" id="node12" href="$c__string_8h.html" title="mruby/c String object" alt="" coords="406,229,485,256"/>
+<area shape="rect" id="node6" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="285,304,349,331"/>
+<area shape="rect" id="node9" href="$class_8h.html" title="mruby/c Object, Proc, Nil, False and True class and class specific functions." alt="" coords="165,155,229,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="393,379,458,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="283,379,352,405"/>
+<area shape="rect" id="node10" href="$keyvalue_8h.html" title="mruby/c Key(Symbol) &#45; Value store." alt="" coords="195,229,280,256"/>
+</map>
