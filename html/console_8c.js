@@ -3,6 +3,7 @@ var console_8c =
     [ "console_nprint", "console_8c.html#af6db82d278e93d7eaa4718b7c6b6baec", null ],
     [ "console_printf", "console_8c.html#acd6504847365a30d7371df1d08bab0fa", null ],
     [ "console_putchar", "console_8c.html#ac156aa97dae8b45e5aea8f6534d38946", null ],
+    [ "mrbc_p", "console_8c.html#a0ed4967a88bebf23eebf547793102cbb", null ],
     [ "mrbc_p_sub", "console_8c.html#a5fd123baa5e10d792c7c551ff36e885d", null ],
     [ "mrbc_print_sub", "console_8c.html#a1292c74af92b0125bd9040208f35617f", null ],
     [ "mrbc_printf_bit", "console_8c.html#ad0442df05d04ec53cfbb4dc2175303f3", null ],

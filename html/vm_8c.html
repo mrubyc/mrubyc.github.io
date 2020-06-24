@@ -145,6 +145,8 @@ Include dependency graph for vm.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a6798b3e5528bd6f6a2f9cfec3b09e16c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>STOP_IF_TOPLEVEL</b>()</td></tr>
+<tr class="separator:a6798b3e5528bd6f6a2f9cfec3b09e16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fb99c8f3281add1be199117d23bd57d"><td class="memItemLeft" align="right" valign="top"><a id="a8fb99c8f3281add1be199117d23bd57d"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAG_REST_PARAM</b>&#160;&#160;&#160;(a &amp; 0x1000)</td></tr>
 <tr class="separator:a8fb99c8f3281add1be199117d23bd57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,7 +351,33 @@ static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>free_vm_bi
 Copyright (C) 2015-2020 Kyushu Institute of Technology.
 Copyright (C) 2015-2020 Shimane IT Open-Innovation Center.</pre><pre>This file is distributed under BSD 3-Clause License.</pre><pre>Fetch mruby <a class="el" href="struct_v_m.html" title="Virtual Machine.">VM</a> bytecodes, decode and execute.</pre><pre></pre> 
 <p class="definition">Definition in file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6798b3e5528bd6f6a2f9cfec3b09e16c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6798b3e5528bd6f6a2f9cfec3b09e16c">&#9670;&nbsp;</a></span>STOP_IF_TOPLEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STOP_IF_TOPLEVEL</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> {                                \</div>
+<div class="line">    if( vm-&gt;callinfo_tail == NULL ){  \</div>
+<div class="line">      vm-&gt;flag_preemption = 1;        \</div>
+<div class="line">      return -1;                      \</div>
+<div class="line">    }                                 \</div>
+<div class="line">  } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00042">42</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ac331f49fbf40402c6fe3518b1212130d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac331f49fbf40402c6fe3518b1212130d">&#9670;&nbsp;</a></span>mrbc_cleanup_vm()</h2>
 
@@ -367,7 +395,7 @@ Copyright (C) 2015-2020 Shimane IT Open-Innovation Center.</pre><pre>This file i
 </div><div class="memdoc">
 <p>cleanup </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00135">135</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00149">149</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -395,7 +423,7 @@ Copyright (C) 2015-2020 Shimane IT Open-Innovation Center.</pre><pre>This file i
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00147">147</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00161">161</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -463,7 +491,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>symbol name string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00046">46</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00060">60</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -523,7 +551,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>get the self object </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00238">238</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00252">252</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -551,7 +579,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to allocated memory or NULL. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00160">160</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00174">174</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -588,7 +616,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00174">174</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00188">188</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -627,7 +655,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pop current status from callinfo stack </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00220">220</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00234">234</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -670,7 +698,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Push current status to callinfo stack </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00197">197</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00211">211</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -697,7 +725,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02584">2584</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02603">2603</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -724,7 +752,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02566">2566</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02585">2585</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -760,7 +788,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02616">2616</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02635">2635</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -805,7 +833,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02521">2521</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02540">2540</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -856,7 +884,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02687">2687</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02706">2706</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -885,7 +913,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>display "not supported" message </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00064">64</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00078">78</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -895,17 +923,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="console_8c.html#acd6504847365a30d7371df1d08bab0fa" title=" " alt="" coords="157,233,260,260"/>
 <area shape="rect" href="console_8c.html#af6db82d278e93d7eaa4718b7c6b6baec" title=" " alt="" coords="316,5,423,32"/>
 <area shape="rect" href="console_8c.html#ad0442df05d04ec53cfbb4dc2175303f3" title=" " alt="" coords="315,107,423,133"/>
-<area shape="rect" href="console_8c.html#a9466d33c22e177c9ed9ff00e3e2a3b4b" title=" " alt="" coords="479,157,587,184"/>
-<area shape="rect" href="console_8h.html#aa7f8923ab3a4c0bbc1e5635dd53a7a90" title=" " alt="" coords="637,107,746,133"/>
+<area shape="rect" href="console_8c.html#a9466d33c22e177c9ed9ff00e3e2a3b4b" title=" " alt="" coords="479,81,587,108"/>
+<area shape="rect" href="console_8h.html#aa7f8923ab3a4c0bbc1e5635dd53a7a90" title=" " alt="" coords="479,132,588,159"/>
 <area shape="rect" href="console_8c.html#a9eb44501e598f9ee07e69ef9c9768e33" title=" " alt="" coords="310,208,429,235"/>
 <area shape="rect" href="console_8h.html#aec611a34ed4276eb3e5dd276f483b3e2" title=" " alt="" coords="308,259,431,285"/>
 <area shape="rect" href="console_8c.html#a88140741b76835ec39c6ff51eb17f98f" title=" " alt="" coords="310,309,429,336"/>
 <area shape="rect" href="console_8h.html#ab9249f9df1d30eb7d40694ef9765fb40" title=" " alt="" coords="314,360,425,387"/>
 <area shape="rect" href="console_8h.html#a0dda9c9ce491819caf32c457f0202c4b" title=" " alt="" coords="314,411,425,437"/>
 <area shape="rect" href="console_8c.html#a85ae8d12c96b78c9f04f95e05f11b5ab" title=" " alt="" coords="308,461,431,488"/>
-<area shape="rect" href="alloc_8c.html#a1288b3724bace44ea2ab9e03a45ccc1d" title=" " alt="" coords="635,157,748,184"/>
-<area shape="rect" href="alloc_8c.html#add284a6bc6f81677d520f64896974572" title=" " alt="" coords="637,208,745,235"/>
-<area shape="rect" href="console_8h.html#a5d07cf13337f642df270af9c86c61227" title=" " alt="" coords="796,107,912,133"/>
+<area shape="rect" href="console_8h.html#a5d07cf13337f642df270af9c86c61227" title=" " alt="" coords="636,132,752,159"/>
 </map>
 </div>
 
@@ -960,7 +986,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02452">2452</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02471">2471</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 
 </div>
 </div>
@@ -1013,7 +1039,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01498">1498</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01508">1508</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1075,7 +1101,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01542">1542</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01552">1552</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1137,7 +1163,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02315">2315</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02334">2334</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1199,7 +1225,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02001">2001</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02020">2020</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1261,7 +1287,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01965">1965</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01984">1984</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1323,7 +1349,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01159">1159</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01173">1173</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1385,7 +1411,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01851">1851</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01861">1861</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1447,7 +1473,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01878">1878</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01888">1888</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1509,7 +1535,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01908">1908</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01918">1918</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1571,7 +1597,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01944">1944</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01963">1963</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1633,7 +1659,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01448">1448</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01458">1458</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1695,7 +1721,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01407">1407</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01417">1417</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1757,7 +1783,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02205">2205</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02224">2224</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1819,7 +1845,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02261">2261</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02280">2280</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1881,7 +1907,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01692">1692</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01702">1702</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1929,7 +1955,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Dummy function for unsupported opcode B </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02478">2478</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02497">2497</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1977,7 +2003,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Dummy function for unsupported opcode BB </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02491">2491</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02510">2510</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2025,7 +2051,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Dummy function for unsupported opcode BBB </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02504">2504</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02523">2523</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2073,7 +2099,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Dummy function for unsupported opcode Z </p>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02465">2465</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02484">2484</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2135,7 +2161,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01206">1206</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01220">1220</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2197,7 +2223,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01033">1033</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01047">1047</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2259,7 +2285,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01003">1003</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01017">1017</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2321,7 +2347,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01736">1736</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01746">1746</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2383,7 +2409,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00897">897</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00911">911</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2445,7 +2471,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02232">2232</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02251">2251</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2507,7 +2533,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02407">2407</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02426">2426</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2569,7 +2595,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01828">1828</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01838">1838</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2631,7 +2657,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00588">588</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00602">602</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2693,7 +2719,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00492">492</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00506">506</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2755,7 +2781,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00543">543</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00557">557</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2817,7 +2843,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00661">661</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00675">675</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2879,7 +2905,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00707">707</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00721">721</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2941,7 +2967,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01805">1805</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01815">1815</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3003,7 +3029,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02131">2131</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02150">2150</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3065,7 +3091,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02044">2044</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02063">2063</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3127,7 +3153,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00785">785</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00799">799</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3189,7 +3215,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00804">804</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00818">818</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3251,7 +3277,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00846">846</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00860">860</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3313,7 +3339,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00825">825</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00839">839</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3375,7 +3401,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01782">1782</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01792">1792</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3437,7 +3463,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00472">472</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00486">486</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3499,7 +3525,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00321">321</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00335">335</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3561,7 +3587,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00361">361</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00375">375</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3623,7 +3649,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00341">341</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00355">355</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3685,7 +3711,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00301">301</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00315">315</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3747,7 +3773,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00409">409</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00423">423</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3809,7 +3835,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00429">429</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00443">443</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3871,7 +3897,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00385">385</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00399">399</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3933,7 +3959,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00452">452</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00466">466</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3995,7 +4021,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01759">1759</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01769">1769</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4057,7 +4083,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02159">2159</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02178">2178</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4119,7 +4145,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00280">280</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00294">294</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4181,7 +4207,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01648">1648</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01658">1658</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4243,7 +4269,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00264">264</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00278">278</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4305,7 +4331,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00867">867</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00881">881</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4367,7 +4393,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00955">955</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00969">969</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4429,7 +4455,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00974">974</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00988">988</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4491,7 +4517,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02183">2183</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02202">2202</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4553,7 +4579,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00922">922</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00936">936</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4615,7 +4641,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01321">1321</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01335">1335</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4677,7 +4703,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01359">1359</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01368">1368</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4739,7 +4765,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02367">2367</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02386">2386</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4801,7 +4827,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01065">1065</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01079">1079</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4863,7 +4889,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00618">618</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00632">632</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4925,7 +4951,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00521">521</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00535">535</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4987,7 +5013,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00566">566</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00580">580</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5049,7 +5075,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00746">746</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00760">760</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5111,7 +5137,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02426">2426</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02445">2445</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5173,7 +5199,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02100">2100</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02119">2119</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5235,7 +5261,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02068">2068</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02087">2087</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5297,7 +5323,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01573">1573</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01583">1583</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5359,7 +5385,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01617">1617</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01627">1627</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5421,7 +5447,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01084">1084</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l01098">1098</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5483,7 +5509,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02384">2384</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02403">2403</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5519,7 +5545,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02629">2629</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02648">2648</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -5529,17 +5555,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="console_8c.html#acd6504847365a30d7371df1d08bab0fa" title=" " alt="" coords="160,233,263,260"/>
 <area shape="rect" href="console_8c.html#af6db82d278e93d7eaa4718b7c6b6baec" title=" " alt="" coords="319,5,425,32"/>
 <area shape="rect" href="console_8c.html#ad0442df05d04ec53cfbb4dc2175303f3" title=" " alt="" coords="318,107,426,133"/>
-<area shape="rect" href="console_8c.html#a9466d33c22e177c9ed9ff00e3e2a3b4b" title=" " alt="" coords="481,157,589,184"/>
-<area shape="rect" href="console_8h.html#aa7f8923ab3a4c0bbc1e5635dd53a7a90" title=" " alt="" coords="639,107,749,133"/>
+<area shape="rect" href="console_8c.html#a9466d33c22e177c9ed9ff00e3e2a3b4b" title=" " alt="" coords="482,81,590,108"/>
+<area shape="rect" href="console_8h.html#aa7f8923ab3a4c0bbc1e5635dd53a7a90" title=" " alt="" coords="481,132,591,159"/>
 <area shape="rect" href="console_8c.html#a9eb44501e598f9ee07e69ef9c9768e33" title=" " alt="" coords="313,208,431,235"/>
 <area shape="rect" href="console_8h.html#aec611a34ed4276eb3e5dd276f483b3e2" title=" " alt="" coords="311,259,433,285"/>
 <area shape="rect" href="console_8c.html#a88140741b76835ec39c6ff51eb17f98f" title=" " alt="" coords="313,309,431,336"/>
 <area shape="rect" href="console_8h.html#ab9249f9df1d30eb7d40694ef9765fb40" title=" " alt="" coords="317,360,427,387"/>
 <area shape="rect" href="console_8h.html#a0dda9c9ce491819caf32c457f0202c4b" title=" " alt="" coords="317,411,427,437"/>
 <area shape="rect" href="console_8c.html#a85ae8d12c96b78c9f04f95e05f11b5ab" title=" " alt="" coords="311,461,433,488"/>
-<area shape="rect" href="alloc_8c.html#a1288b3724bace44ea2ab9e03a45ccc1d" title=" " alt="" coords="637,157,751,184"/>
-<area shape="rect" href="alloc_8c.html#add284a6bc6f81677d520f64896974572" title=" " alt="" coords="640,208,748,235"/>
-<area shape="rect" href="console_8h.html#a5d07cf13337f642df270af9c86c61227" title=" " alt="" coords="799,107,915,133"/>
+<area shape="rect" href="console_8h.html#a5d07cf13337f642df270af9c86c61227" title=" " alt="" coords="639,132,755,159"/>
 </map>
 </div>
 
@@ -5621,7 +5645,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00081">81</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00095">95</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -2,6 +2,7 @@ var vm_8c =
 [
     [ "FLAG_DICT_PARAM", "vm_8c.html#a57de944ee9d4b04ff800be10be083832", null ],
     [ "FLAG_REST_PARAM", "vm_8c.html#a8fb99c8f3281add1be199117d23bd57d", null ],
+    [ "STOP_IF_TOPLEVEL", "vm_8c.html#a6798b3e5528bd6f6a2f9cfec3b09e16c", null ],
     [ "mrbc_cleanup_vm", "vm_8c.html#ac331f49fbf40402c6fe3518b1212130d", null ],
     [ "mrbc_get_callee_name", "vm_8c.html#a405f544d3f749580ee80ba39da651000", null ],
     [ "mrbc_get_irep_symbol", "vm_8c.html#a23ea2e4d7dbc6e114a26609c656e091d", null ],
