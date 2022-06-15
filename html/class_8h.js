@@ -1,0 +1,27 @@
+var class_8h =
+[
+    [ "RClass", "struct_r_class.html", "struct_r_class" ],
+    [ "RBuiltinClass", "struct_r_builtin_class.html", "struct_r_builtin_class" ],
+    [ "RInstance", "struct_r_instance.html", null ],
+    [ "RProc", "struct_r_proc.html", null ],
+    [ "RMethod", "struct_r_method.html", "struct_r_method" ],
+    [ "mrbc_class", "class_8h.html#af3a99ac8c52fd6c7334c3f11a6018b7c", null ],
+    [ "mrbc_instance", "class_8h.html#a0ceca4652363cc585bca3aaa4fb1ab50", null ],
+    [ "mrbc_method", "class_8h.html#a2a4322a918b826b1eaff09aafdb2e1ff", null ],
+    [ "mrbc_proc", "class_8h.html#a5916fbb19b0523d36da837bf7eb2c373", null ],
+    [ "c_ineffect", "class_8h.html#a533839da23f3a62f2e600a51eac82939", null ],
+    [ "mrbc_define_class", "class_8h.html#afe2ecc71369716c4868b52dd603832a9", null ],
+    [ "mrbc_define_method", "class_8h.html#a6887243bf6bdcd25ced9fe82eb75f6e4", null ],
+    [ "mrbc_find_method", "class_8h.html#ad24345e39a51dd926f54778eaf9bd3fd", null ],
+    [ "mrbc_get_class_by_name", "class_8h.html#a2154a96fcc63d15c581329842cf5479e", null ],
+    [ "mrbc_init_class", "class_8h.html#a33245c1a2325726c07d41ee637fe943d", null ],
+    [ "mrbc_instance_delete", "class_8h.html#ab65c16388fcf33ff5fd13cc9f8e0af1f", null ],
+    [ "mrbc_instance_getiv", "class_8h.html#a6d2b0091921436c5f7ce6d75422ce59e", null ],
+    [ "mrbc_instance_new", "class_8h.html#a1331f5595b4ded5928a56bf7c9fca6ed", null ],
+    [ "mrbc_instance_setiv", "class_8h.html#ad139c9f26c2131516f7f59c3417cebf5", null ],
+    [ "mrbc_obj_is_kind_of", "class_8h.html#aab2497374dad375daf0450b03290b6ae", null ],
+    [ "mrbc_proc_delete", "class_8h.html#a788d9272071cb02b778dc1e99bf7a86f", null ],
+    [ "mrbc_proc_new", "class_8h.html#ad00431a0fa44aa210bbbceb83498950a", null ],
+    [ "mrbc_run_mrblib", "class_8h.html#ad12d568598d06f67848857cff37c4a58", null ],
+    [ "mrbc_class_tbl", "class_8h.html#a4c99a841e4c6e2264f2e8331257323bf", null ]
+];

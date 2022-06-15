@@ -1,0 +1,8 @@
+<map id="VM" name="VM">
+<area shape="rect" id="node1" title="Virtual Machine." alt="" coords="99,829,247,995"/>
+<area shape="rect" id="node2" href="$struct_i_r_e_p.html" title="IREP Internal REPresentation." alt="" coords="142,5,229,229"/>
+<area shape="rect" id="node5" href="$struct_r_proc.html" title="Proc object." alt="" coords="86,299,285,377"/>
+<area shape="rect" id="node6" href="$struct_c_a_l_l_i_n_f_o.html" title="Call information." alt="" coords="263,631,387,767"/>
+<area shape="rect" id="node3" href="$struct_r_object.html" title="Value object." alt="" coords="165,447,237,568"/>
+<area shape="rect" id="node4" href="$struct_r_class.html" title="Class object." alt="" coords="427,292,578,384"/>
+</map>

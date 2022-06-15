@@ -1,0 +1,12 @@
+<map id="error.c" name="error.c">
+<area shape="rect" id="node1" title="exception classes" alt="" coords="281,5,339,32"/>
+<area shape="rect" id="node2" href="$alloc_8h.html" title="mruby/c memory management." alt="" coords="5,80,65,107"/>
+<area shape="rect" id="node3" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="290,304,354,331"/>
+<area shape="rect" id="node4" href="$symbol_8h.html" title="mruby/c Symbol class" alt="" coords="141,155,215,181"/>
+<area shape="rect" id="node5" href="$error_8h.html" title="exception classes" alt="" coords="226,229,285,256"/>
+<area shape="rect" id="node6" href="$class_8h.html" title="Class related functions." alt="" coords="290,155,354,181"/>
+<area shape="rect" id="node7" href="$c__string_8h.html" title="mruby/c String class" alt="" coords="411,229,489,256"/>
+<area shape="rect" id="node8" href="$vm_8h.html" title="mruby bytecode executor." alt="" coords="347,80,398,107"/>
+<area shape="rect" id="node9" href="$console_8h.html" title="console output module. (not yet input)" alt="" coords="484,155,563,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="530,80,717,107"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="RBasic" name="RBasic">
+<area shape="rect" id="node1" title="Base class for some objects." alt="" coords="673,5,872,83"/>
+<area shape="rect" id="node2" href="$struct_r_array.html" title="Array object." alt="" coords="5,138,204,259"/>
+<area shape="rect" id="node3" href="$struct_r_exception.html" title="Exception object." alt="" coords="228,138,427,259"/>
+<area shape="rect" id="node4" href="$struct_r_hash.html" title="Hash object." alt="" coords="451,138,649,259"/>
+<area shape="rect" id="node5" href="$struct_r_instance.html" title="Instance object." alt="" coords="673,138,872,259"/>
+<area shape="rect" id="node6" href="$struct_r_proc.html" title="Proc object." alt="" coords="896,131,1095,267"/>
+<area shape="rect" id="node7" href="$struct_r_range.html" title="Range object." alt="" coords="1119,138,1317,259"/>
+<area shape="rect" id="node8" href="$struct_r_string.html" title="String object." alt="" coords="1341,145,1540,252"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="CALLINFO" name="CALLINFO">
+<area shape="rect" id="node1" title="Call information." alt="" coords="79,447,203,583"/>
+<area shape="rect" id="node2" href="$struct_i_r_e_p.html" title="IREP Internal REPresentation." alt="" coords="5,160,92,384"/>
+<area shape="rect" id="node3" href="$struct_r_object.html" title="Value object." alt="" coords="245,211,317,333"/>
+<area shape="rect" id="node4" href="$struct_r_class.html" title="Class object." alt="" coords="87,5,237,97"/>
+</map>

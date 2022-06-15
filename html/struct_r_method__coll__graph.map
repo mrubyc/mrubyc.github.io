@@ -1,0 +1,6 @@
+<map id="RMethod" name="RMethod">
+<area shape="rect" id="node1" title="Method management structure." alt="" coords="169,292,245,428"/>
+<area shape="rect" id="node4" href="$struct_r_class.html" title="Class object." alt="" coords="5,505,156,597"/>
+<area shape="rect" id="node2" href="$struct_i_r_e_p.html" title="IREP Internal REPresentation." alt="" coords="237,5,324,229"/>
+<area shape="rect" id="node3" href="$struct_v_m.html" title="Virtual Machine." alt="" coords="200,660,348,825"/>
+</map>

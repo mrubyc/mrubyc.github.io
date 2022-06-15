@@ -1,0 +1,9 @@
+<map id="global.h" name="global.h">
+<area shape="rect" id="node1" title="Constant and global variables." alt="" coords="242,5,309,32"/>
+<area shape="rect" id="node2" href="$c__math_8c.html" title="mruby/c Math class" alt="" coords="5,80,81,107"/>
+<area shape="rect" id="node3" href="$class_8c.html" title="Class related functions." alt="" coords="106,80,170,107"/>
+<area shape="rect" id="node4" href="$global_8c.html" title="Constant and global variables." alt="" coords="194,80,261,107"/>
+<area shape="rect" id="node5" href="$mrubyc_8h.html" title="Include at once the necessary header files for user program." alt="" coords="285,80,361,107"/>
+<area shape="rect" id="node6" href="$rrt0_8c.html" title="Realtime multitask monitor for mruby/c." alt="" coords="385,80,437,107"/>
+<area shape="rect" id="node7" href="$vm_8c.html" title="mruby bytecode executor." alt="" coords="462,80,513,107"/>
+</map>

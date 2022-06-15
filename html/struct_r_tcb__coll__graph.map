@@ -1,0 +1,5 @@
+<map id="RTcb" name="RTcb">
+<area shape="rect" id="node1" title="Task control block." alt="" coords="7,233,151,399"/>
+<area shape="rect" id="node2" href="$struct_r_mutex.html" title="Mutex." alt="" coords="45,461,113,539"/>
+<area shape="rect" id="node3" href="$struct_v_m.html" title="Virtual Machine." alt="" coords="5,5,153,171"/>
+</map>

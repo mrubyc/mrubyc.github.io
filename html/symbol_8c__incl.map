@@ -1,0 +1,11 @@
+<map id="symbol.c" name="symbol.c">
+<area shape="rect" id="node1" title="mruby/c Symbol class" alt="" coords="365,5,440,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,181,107"/>
+<area shape="rect" id="node3" href="$alloc_8h.html" title="mruby/c memory management." alt="" coords="226,155,286,181"/>
+<area shape="rect" id="node4" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="405,155,469,181"/>
+<area shape="rect" id="node5" href="$class_8h.html" title="Class related functions." alt="" coords="405,80,469,107"/>
+<area shape="rect" id="node6" href="$c__string_8h.html" title="mruby/c String class" alt="" coords="494,80,573,107"/>
+<area shape="rect" id="node7" href="$c__array_8h.html" title="mruby/c Array class" alt="" coords="256,80,331,107"/>
+<area shape="rect" id="node8" href="$console_8h.html" title="console output module. (not yet input)" alt="" coords="597,80,675,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="700,80,873,107"/>
+</map>

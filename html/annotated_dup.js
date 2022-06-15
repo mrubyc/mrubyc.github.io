@@ -1,0 +1,28 @@
+var annotated_dup =
+[
+    [ "CALLINFO", "struct_c_a_l_l_i_n_f_o.html", "struct_c_a_l_l_i_n_f_o" ],
+    [ "IREP", "struct_i_r_e_p.html", "struct_i_r_e_p" ],
+    [ "IREP_CATCH_HANDLER", "struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html", "struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r" ],
+    [ "MRBC_ALLOC_STATISTICS", "struct_m_r_b_c___a_l_l_o_c___s_t_a_t_i_s_t_i_c_s.html", "struct_m_r_b_c___a_l_l_o_c___s_t_a_t_i_s_t_i_c_s" ],
+    [ "RArray", "struct_r_array.html", "struct_r_array" ],
+    [ "RBasic", "struct_r_basic.html", null ],
+    [ "RBuiltinClass", "struct_r_builtin_class.html", "struct_r_builtin_class" ],
+    [ "RClass", "struct_r_class.html", "struct_r_class" ],
+    [ "RException", "struct_r_exception.html", "struct_r_exception" ],
+    [ "RHash", "struct_r_hash.html", "struct_r_hash" ],
+    [ "RHashIterator", "struct_r_hash_iterator.html", null ],
+    [ "RInstance", "struct_r_instance.html", null ],
+    [ "RKeyValue", "struct_r_key_value.html", "struct_r_key_value" ],
+    [ "RKeyValueHandle", "struct_r_key_value_handle.html", "struct_r_key_value_handle" ],
+    [ "RKeyValueIterator", "struct_r_key_value_iterator.html", null ],
+    [ "RMethod", "struct_r_method.html", "struct_r_method" ],
+    [ "RMutex", "struct_r_mutex.html", null ],
+    [ "RObject", "struct_r_object.html", null ],
+    [ "RPrintf", "struct_r_printf.html", "struct_r_printf" ],
+    [ "RPrintfFormat", "struct_r_printf_format.html", "struct_r_printf_format" ],
+    [ "RProc", "struct_r_proc.html", null ],
+    [ "RRange", "struct_r_range.html", null ],
+    [ "RString", "struct_r_string.html", "struct_r_string" ],
+    [ "RTcb", "struct_r_tcb.html", "struct_r_tcb" ],
+    [ "VM", "struct_v_m.html", "struct_v_m" ]
+];

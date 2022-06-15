@@ -1,0 +1,9 @@
+<map id="global.c" name="global.c">
+<area shape="rect" id="node1" title="Constant and global variables." alt="" coords="163,5,230,32"/>
+<area shape="rect" id="node2" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="170,229,234,256"/>
+<area shape="rect" id="node3" href="$global_8h.html" title="Constant and global variables." alt="" coords="28,155,95,181"/>
+<area shape="rect" id="node4" href="$keyvalue_8h.html" title="mruby/c Key(Symbol) &#45; Value store." alt="" coords="119,155,204,181"/>
+<area shape="rect" id="node5" href="$class_8h.html" title="Class related functions." alt="" coords="199,80,263,107"/>
+<area shape="rect" id="node6" href="$symbol_8h.html" title="mruby/c Symbol class" alt="" coords="279,155,354,181"/>
+<area shape="rect" id="node7" href="$console_8h.html" title="console output module. (not yet input)" alt="" coords="348,80,426,107"/>
+</map>

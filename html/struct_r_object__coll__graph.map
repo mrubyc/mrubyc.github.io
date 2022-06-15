@@ -1,0 +1,12 @@
+<map id="RObject" name="RObject">
+<area shape="rect" id="node1" title="Value object." alt="" coords="553,329,625,451"/>
+<area shape="rect" id="node5" href="$struct_r_proc.html" title="Proc object." alt="" coords="651,543,849,620"/>
+<area shape="rect" id="node6" href="$struct_r_array.html" title="Array object." alt="" coords="873,528,1072,635"/>
+<area shape="rect" id="node8" href="$struct_r_range.html" title="Range object." alt="" coords="205,535,404,627"/>
+<area shape="rect" id="node9" href="$struct_r_hash.html" title="Hash object." alt="" coords="428,528,627,635"/>
+<area shape="rect" id="node2" href="$struct_r_basic.html" title="Base class for some objects." alt="" coords="711,13,909,90"/>
+<area shape="rect" id="node4" href="$struct_r_instance.html" title="Instance object." alt="" coords="377,167,576,259"/>
+<area shape="rect" id="node7" href="$struct_r_string.html" title="String object." alt="" coords="600,160,799,267"/>
+<area shape="rect" id="node10" href="$struct_r_exception.html" title="Exception object." alt="" coords="155,160,353,267"/>
+<area shape="rect" id="node3" href="$struct_r_class.html" title="Class object." alt="" coords="5,5,156,97"/>
+</map>

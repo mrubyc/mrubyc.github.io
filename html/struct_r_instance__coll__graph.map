@@ -1,0 +1,6 @@
+<map id="RInstance" name="RInstance">
+<area shape="rect" id="node1" title="Instance object." alt="" coords="204,175,403,267"/>
+<area shape="rect" id="node2" href="$struct_r_basic.html" title="Base class for some objects." alt="" coords="5,20,204,97"/>
+<area shape="rect" id="node3" href="$struct_r_class.html" title="Class object." alt="" coords="228,13,379,105"/>
+<area shape="rect" id="node4" href="$struct_r_key_value_handle.html" title="Key&#45;Value handle." alt="" coords="473,5,601,112"/>
+</map>

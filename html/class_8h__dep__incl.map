@@ -1,0 +1,20 @@
+<map id="class.h" name="class.h">
+<area shape="rect" id="node1" title="Class related functions." alt="" coords="617,5,681,32"/>
+<area shape="rect" id="node2" href="$c__array_8c.html" title="mruby/c Array class" alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" href="$c__hash_8c.html" title="mruby/c Hash class" alt="" coords="104,80,179,107"/>
+<area shape="rect" id="node4" href="$c__math_8c.html" title="mruby/c Math class" alt="" coords="203,80,279,107"/>
+<area shape="rect" id="node5" href="$c__numeric_8c.html" title="mruby/c Integer and Float class" alt="" coords="304,80,397,107"/>
+<area shape="rect" id="node6" href="$c__object_8c.html" title="Object, Proc, Nil, True and False class." alt="" coords="292,155,375,181"/>
+<area shape="rect" id="node7" href="$c__range_8c.html" title="mruby/c Range class" alt="" coords="851,80,930,107"/>
+<area shape="rect" id="node8" href="$c__string_8c.html" title="mruby/c String class" alt="" coords="399,155,478,181"/>
+<area shape="rect" id="node9" href="$class_8c.html" title="Class related functions." alt="" coords="503,155,567,181"/>
+<area shape="rect" id="node10" href="$console_8c.html" title="console output module. (not yet input)" alt="" coords="954,80,1033,107"/>
+<area shape="rect" id="node11" href="$error_8c.html" title="exception classes" alt="" coords="591,155,649,181"/>
+<area shape="rect" id="node12" href="$global_8c.html" title="Constant and global variables." alt="" coords="1057,80,1124,107"/>
+<area shape="rect" id="node13" href="$mrubyc_8h.html" title="Include at once the necessary header files for user program." alt="" coords="674,155,750,181"/>
+<area shape="rect" id="node14" href="$rrt0_8c.html" title="Realtime multitask monitor for mruby/c." alt="" coords="774,155,826,181"/>
+<area shape="rect" id="node15" href="$symbol_8c.html" title="mruby/c Symbol class" alt="" coords="1148,80,1223,107"/>
+<area shape="rect" id="node16" href="$value_8c.html" title="mruby/c value definitions" alt="" coords="1247,80,1311,107"/>
+<area shape="rect" id="node17" href="$vm_8c.html" title="mruby bytecode executor." alt="" coords="851,155,901,181"/>
+<area shape="rect" id="node18" href="$vm_8h.html" title="mruby bytecode executor." alt="" coords="624,80,675,107"/>
+</map>

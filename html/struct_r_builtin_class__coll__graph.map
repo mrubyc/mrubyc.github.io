@@ -1,0 +1,5 @@
+<map id="RBuiltinClass" name="RBuiltinClass">
+<area shape="rect" id="node1" title="Built&#45;in class object." alt="" coords="5,359,156,480"/>
+<area shape="rect" id="node2" href="$struct_r_class.html" title="Class object." alt="" coords="27,5,177,97"/>
+<area shape="rect" id="node3" href="$struct_r_method.html" title="Method management structure." alt="" coords="151,160,227,296"/>
+</map>

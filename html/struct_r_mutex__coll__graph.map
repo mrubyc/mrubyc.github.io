@@ -1,0 +1,4 @@
+<map id="RMutex" name="RMutex">
+<area shape="rect" id="node1" title="Mutex." alt="" coords="43,5,111,83"/>
+<area shape="rect" id="node2" href="$struct_r_tcb.html" title="Task control block." alt="" coords="5,145,149,311"/>
+</map>
