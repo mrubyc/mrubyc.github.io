@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/***** Signal catching functions ********************************************/</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/***** Local functions ******************************************************/</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">//================================================================</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> send_by_name( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, mrbc_sym sym_id, <span class="keywordtype">int</span> a, <span class="keywordtype">int</span> c )</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> send_by_name( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id, <span class="keywordtype">int</span> a, <span class="keywordtype">int</span> c )</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">// Does not support to keyword arguments.</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// thus, reorder arguments to mruby2 series compatible.</span></div>
@@ -234,14 +234,14 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment"></span><span class="keyword">static</span> <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> * mrbc_get_self( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *regs )</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>{</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *self = &amp;regs[0];</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordflow">if</span>( mrbc_type(*self) == MRBC_TT_PROC ) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(*self) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> ) {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> *callinfo = regs[0].proc-&gt;callinfo_self;</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">if</span>( callinfo ) {</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      self = callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#aab2e27bc8be925e4981651f50f60e970">cur_regs</a> + callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#af6c59ed0ef8625f73306604347b6034a">reg_offset</a>;</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      self = &amp;vm-&gt;regs[0];</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    assert( self-&gt;tt != MRBC_TT_PROC );</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    assert( self-&gt;tt != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordflow">return</span> self;</div>
@@ -258,7 +258,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">//================================================================</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="vm_8c.html#a80fe3c47c221545a490e60b00f0fb289">  208</a></span><span class="comment"></span>mrbc_sym <a class="code hl_function" href="vm_8c.html#a80fe3c47c221545a490e60b00f0fb289">mrbc_get_callee_symid</a>( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm )</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="vm_8c.html#a80fe3c47c221545a490e60b00f0fb289">  208</a></span><span class="comment"></span><a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> <a class="code hl_function" href="vm_8c.html#a80fe3c47c221545a490e60b00f0fb289">mrbc_get_callee_symid</a>( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm )</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>{</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  uint8_t rb = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a>[-2];</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="comment">/* NOTE</span></div>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">//================================================================</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">  235</a></span><span class="comment"></span><a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> * <a class="code hl_function" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a>( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, mrbc_sym method_id, <span class="keywordtype">int</span> reg_offset, <span class="keywordtype">int</span> n_args )</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">  235</a></span><span class="comment"></span><a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> * <a class="code hl_function" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a>( <span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> method_id, <span class="keywordtype">int</span> reg_offset, <span class="keywordtype">int</span> n_args )</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>{</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> *callinfo = mrbc_alloc(vm, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a>));</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  <span class="keywordflow">if</span>( !callinfo ) <span class="keywordflow">return</span> callinfo;</div>
@@ -420,7 +420,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>  <span class="keywordtype">int</span> i;</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>  <span class="keywordflow">for</span>( i = 0; i &lt; vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a23bdb9b41c951a6aad4d745bf4b88e29">regs_size</a>; i++ ) {</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="comment">//mrbc_printf(&quot;vm-&gt;regs[%d].tt = %d\n&quot;, i, mrbc_type(vm-&gt;regs[i]));</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="keywordflow">if</span>( mrbc_type(vm-&gt;regs[i]) != MRBC_TT_NIL ) n_used = i;</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(vm-&gt;regs[i]) != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> ) n_used = i;</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    mrbc_decref_empty(&amp;vm-&gt;regs[i]);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>  }</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  (void)n_used; <span class="comment">// avoid warning.</span></div>
@@ -608,7 +608,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>  FETCH_BB();</div>
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *sym_name = <a class="code hl_define" href="vm_8h.html#a7589904fe587f039862c0049ef26e56f">mrbc_irep_symbol_cstr</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>  mrbc_sym sym_id = <a class="code hl_function" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a>(sym_name+1);   <span class="comment">// skip &#39;@&#39;</span></div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_function" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a>(sym_name+1);   <span class="comment">// skip &#39;@&#39;</span></div>
 <div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  <span class="keywordflow">if</span>( sym_id &lt; 0 ) {</div>
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>(vm, MRBC_CLASS(Exception), <span class="stringliteral">&quot;Overflow MAX_SYMBOLS_COUNT&quot;</span>);</div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    <span class="keywordflow">return</span>;</div>
@@ -626,7 +626,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>  FETCH_BB();</div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span> </div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *sym_name = <a class="code hl_define" href="vm_8h.html#a7589904fe587f039862c0049ef26e56f">mrbc_irep_symbol_cstr</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>  mrbc_sym sym_id = <a class="code hl_function" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a>(sym_name+1);   <span class="comment">// skip &#39;@&#39;</span></div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_function" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a>(sym_name+1);   <span class="comment">// skip &#39;@&#39;</span></div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>  <span class="keywordflow">if</span>( sym_id &lt; 0 ) {</div>
 <div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>    <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>(vm, MRBC_CLASS(Exception), <span class="stringliteral">&quot;Overflow MAX_SYMBOLS_COUNT&quot;</span>);</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>    <span class="keywordflow">return</span>;</div>
@@ -642,7 +642,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>{</div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>  FETCH_BB();</div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>  mrbc_sym sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *cls = NULL;</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *v;</div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
@@ -718,10 +718,10 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>{</div>
 <div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>  FETCH_BB();</div>
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span> </div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>  mrbc_sym sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
 <div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>  mrbc_incref(&amp;regs[a]);</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  <span class="keywordflow">if</span>( mrbc_type(regs[0]) == MRBC_TT_CLASS ) {</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[0]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a> ) {</div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    <a class="code hl_function" href="global_8c.html#ab6b469b40de051499c1da3167cdb58f7">mrbc_set_class_const</a>(regs[0].cls, sym_id, &amp;regs[a]);</div>
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>    <a class="code hl_function" href="global_8c.html#ad81782b5b744fc35584b7764690ea605">mrbc_set_const</a>(sym_id, &amp;regs[a]);</div>
@@ -734,7 +734,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>{</div>
 <div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>  FETCH_BB();</div>
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span> </div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>  mrbc_sym sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *cls = regs[a].cls;</div>
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *v;</div>
 <div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span> </div>
@@ -758,7 +758,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>{</div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>  FETCH_BBB();</div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  assert( mrbc_type(regs[0]) == MRBC_TT_PROC );</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[0]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>  <a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> *callinfo = regs[0].proc-&gt;callinfo;</div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span> </div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>  <span class="keywordtype">int</span> i;</div>
@@ -766,7 +766,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    assert( callinfo );</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *reg0 = callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#aab2e27bc8be925e4981651f50f60e970">cur_regs</a> + callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#af6c59ed0ef8625f73306604347b6034a">reg_offset</a>;</div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span> </div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keywordflow">if</span>( mrbc_type(*reg0) != MRBC_TT_PROC ) <span class="keywordflow">break</span>;       <span class="comment">// What to do?</span></div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(*reg0) != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> ) <span class="keywordflow">break</span>;       <span class="comment">// What to do?</span></div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    callinfo = reg0-&gt;proc-&gt;callinfo;</div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  }</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span> </div>
@@ -788,14 +788,14 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>{</div>
 <div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>  FETCH_BBB();</div>
 <div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  assert( regs[0].tt == MRBC_TT_PROC );</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  assert( regs[0].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  <a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> *callinfo = regs[0].proc-&gt;callinfo;</div>
 <div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span> </div>
 <div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>  <span class="keywordtype">int</span> i;</div>
 <div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>  <span class="keywordflow">for</span>( i = 0; i &lt; c; i++ ) {</div>
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>    assert( callinfo );</div>
 <div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *reg0 = callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#aab2e27bc8be925e4981651f50f60e970">cur_regs</a> + callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#af6c59ed0ef8625f73306604347b6034a">reg_offset</a>;</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>    assert( reg0-&gt;tt == MRBC_TT_PROC );</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>    assert( reg0-&gt;tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    callinfo = reg0-&gt;proc-&gt;callinfo;</div>
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>  }</div>
 <div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
@@ -844,7 +844,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>{</div>
 <div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>  FETCH_BS();</div>
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>  <span class="keywordflow">if</span>( regs[a].tt &gt; MRBC_TT_FALSE ) {</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>  <span class="keywordflow">if</span>( regs[a].tt &gt; <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a> ) {</div>
 <div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> += (int16_t)b;</div>
 <div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  }</div>
 <div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>}</div>
@@ -855,7 +855,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>{</div>
 <div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>  FETCH_BS();</div>
 <div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span> </div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  <span class="keywordflow">if</span>( regs[a].tt &lt;= MRBC_TT_FALSE ) {</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  <span class="keywordflow">if</span>( regs[a].tt &lt;= <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a> ) {</div>
 <div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> += (int16_t)b;</div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>  }</div>
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>}</div>
@@ -866,7 +866,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>{</div>
 <div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>  FETCH_BS();</div>
 <div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span> </div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_NIL ) {</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> ) {</div>
 <div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> += (int16_t)b;</div>
 <div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  }</div>
 <div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>}</div>
@@ -895,7 +895,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>  }</div>
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span> </div>
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  <span class="comment">// jump point is outside, thus jump to ensure.</span></div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == MRBC_TT_NIL );</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt = MRBC_TT_JMPUW;</div>
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.handle = (<span class="keywordtype">void</span>*)jump_inst;</div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>-&gt;<a class="code hl_variable" href="struct_i_r_e_p.html#a16a7d005dab4768c9f7693299a5ad7dc">inst</a> + bin_to_uint32(handler-&gt;<a class="code hl_variable" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html#a01ffabeb10edd665bbeb10af0829991f">target</a>);</div>
@@ -918,8 +918,8 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>{</div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>  FETCH_BB();</div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span> </div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  assert( regs[a].tt == MRBC_TT_EXCEPTION );</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>  assert( regs[b].tt == MRBC_TT_CLASS );</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  assert( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323">MRBC_TT_EXCEPTION</a> );</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>  assert( regs[b].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a> );</div>
 <div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span> </div>
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>  <span class="keywordtype">int</span> res = <a class="code hl_function" href="class_8c.html#aab2497374dad375daf0450b03290b6ae">mrbc_obj_is_kind_of</a>( &amp;regs[a], regs[b].cls );</div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  mrbc_set_bool( &amp;regs[b], res );</div>
@@ -935,17 +935,17 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> ra = regs[a];</div>
 <div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>  regs[a].tt = MRBC_TT_EMPTY;</div>
 <div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span> </div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  <span class="keywordflow">switch</span>( mrbc_type(ra) ) {</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  <span class="keywordflow">switch</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(ra) ) {</div>
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>  <span class="keywordflow">case</span> MRBC_TT_RETURN:          <span class="keywordflow">goto</span> CASE_OP_RETURN;</div>
 <div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>  <span class="keywordflow">case</span> MRBC_TT_RETURN_BLK:      <span class="keywordflow">goto</span> CASE_OP_RETURN_BLK;</div>
 <div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>  <span class="keywordflow">case</span> MRBC_TT_BREAK:           <span class="keywordflow">goto</span> CASE_OP_BREAK;</div>
 <div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>  <span class="keywordflow">case</span> MRBC_TT_JMPUW:           <span class="keywordflow">goto</span> CASE_OP_JMPUW;</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>  <span class="keywordflow">case</span> MRBC_TT_EXCEPTION:       <span class="keywordflow">goto</span> CASE_OP_EXCEPTION;</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323">MRBC_TT_EXCEPTION</a>:       <span class="keywordflow">goto</span> CASE_OP_EXCEPTION;</div>
 <div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>  <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>  }</div>
 <div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span> </div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>  assert( mrbc_type(ra) == MRBC_TT_NIL );</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>  assert( mrbc_type(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>) == MRBC_TT_NIL );</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>  assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(ra) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>  assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
 <div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span> </div>
 <div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
@@ -991,7 +991,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span> </div>
 <div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>  <span class="comment">// top level return ?</span></div>
 <div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>  <span class="keywordflow">if</span>( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a6410afb7ec6ac625428080b07b61e5a2">callinfo_tail</a> == NULL ) {</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = MRBC_TT_PROC, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a>, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a> = 0;</div>
 <div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span> </div>
 <div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    vm-&gt;flag_preemption = 1;</div>
@@ -1004,7 +1004,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>  mrbc_decref(reg0);</div>
 <div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>  *reg0 = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>-&gt;ret_val;</div>
 <div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span> </div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = MRBC_TT_PROC, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a>, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a> = 0;</div>
 <div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span> </div>
 <div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <a class="code hl_function" href="vm_8c.html#a4d2652e7557cec8eca462c4427f3a358">mrbc_pop_callinfo</a>(vm);</div>
@@ -1035,7 +1035,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>  mrbc_decref(reg0);</div>
 <div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>  *reg0 = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>-&gt;ret_val;</div>
 <div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span> </div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = MRBC_TT_PROC, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a>, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
 <div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a> = 0;</div>
 <div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>}</div>
@@ -1059,7 +1059,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>  }</div>
 <div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
 <div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>  <span class="comment">// jump point is outside, thus jump to ensure.</span></div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>  assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == MRBC_TT_NIL );</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>  assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
 <div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a> = ra;</div>
 <div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>-&gt;<a class="code hl_variable" href="struct_i_r_e_p.html#a16a7d005dab4768c9f7693299a5ad7dc">inst</a> + bin_to_uint32(handler-&gt;<a class="code hl_variable" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html#a01ffabeb10edd665bbeb10af0829991f">target</a>);</div>
 <div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>  <span class="keywordflow">return</span>;</div>
@@ -1128,7 +1128,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span> </div>
 <div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>  <span class="comment">// set self to new regs[0]</span></div>
 <div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *recv = mrbc_get_self(vm, regs);</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>  assert( recv-&gt;tt != MRBC_TT_PROC );</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>  assert( recv-&gt;tt != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span> </div>
 <div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>  mrbc_incref( recv );</div>
 <div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>  mrbc_decref( &amp;regs[a] );</div>
@@ -1142,7 +1142,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span><span class="comment">    */</span></div>
 <div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span> </div>
 <div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>    <span class="comment">// expand array</span></div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    assert( regs[a+1].tt == MRBC_TT_ARRAY );</div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    assert( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> );</div>
 <div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span> </div>
 <div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>    <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> argary = regs[a+1];</div>
 <div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>    regs[a+1].tt = MRBC_TT_EMPTY;</div>
@@ -1216,14 +1216,14 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span> </div>
 <div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>  <span class="comment">// rewind proc nest</span></div>
 <div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>  <span class="keywordflow">if</span>( lv ) {</div>
-<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>    assert( mrbc_type(*reg0) == MRBC_TT_PROC );</div>
+<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>    assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(*reg0) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span>    <a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> *callinfo = reg0-&gt;proc-&gt;callinfo;</div>
 <div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>    assert( callinfo );</div>
 <div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span> </div>
 <div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>    <span class="keywordtype">int</span> i;</div>
 <div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span>    <span class="keywordflow">for</span>( i = 1; i &lt; lv; i ++ ) {</div>
 <div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>      reg0 = callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#aab2e27bc8be925e4981651f50f60e970">cur_regs</a> + callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#af6c59ed0ef8625f73306604347b6034a">reg_offset</a>;</div>
-<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>      assert( mrbc_type(*reg0) == MRBC_TT_PROC );</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>      assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(*reg0) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>      callinfo = reg0-&gt;proc-&gt;callinfo;</div>
 <div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>      assert( callinfo );</div>
 <div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>    }</div>
@@ -1279,7 +1279,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>  }</div>
 <div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span> </div>
-<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>  <span class="keywordflow">if</span>( argc &lt; m1 &amp;&amp; mrbc_type(regs[0]) != MRBC_TT_PROC ) {</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>  <span class="keywordflow">if</span>( argc &lt; m1 &amp;&amp; <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[0]) != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> ) {</div>
 <div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>    <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>( vm, MRBC_CLASS(ArgumentError), <span class="stringliteral">&quot;wrong number of arguments.&quot;</span>);</div>
 <div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>  }</div>
@@ -1289,8 +1289,8 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>  regs[argc+1].tt = MRBC_TT_EMPTY;</div>
 <div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span> </div>
 <div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>  <span class="comment">// support yield [...] pattern, to expand array.</span></div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>  <span class="keywordflow">if</span>( mrbc_type(regs[0]) == MRBC_TT_PROC &amp;&amp;</div>
-<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>      mrbc_type(regs[1]) == MRBC_TT_ARRAY &amp;&amp;</div>
+<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[0]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> &amp;&amp;</div>
+<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>      <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[1]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> &amp;&amp;</div>
 <div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>      argc == 1 &amp;&amp; m1 &gt; 1 ) {</div>
 <div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>    <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> argary = regs[1];</div>
 <div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>    regs[1].tt = MRBC_TT_EMPTY;</div>
@@ -1314,7 +1314,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>  <span class="keywordflow">if</span>( a &amp; (FLAG_DICT|FLAG_REST) ) {</div>
 <div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span>    <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> dict;</div>
 <div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>    <span class="keywordflow">if</span>( a &amp; FLAG_DICT ) {</div>
-<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>      <span class="keywordflow">if</span>( (argc - m1) &gt; 0 &amp;&amp; mrbc_type(regs[argc]) == MRBC_TT_HASH ) {</div>
+<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>      <span class="keywordflow">if</span>( (argc - m1) &gt; 0 &amp;&amp; <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[argc]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae32c295eb7239f7d8523ec5468cd46ea">MRBC_TT_HASH</a> ) {</div>
 <div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>        dict = regs[argc];</div>
 <div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>        regs[argc--].tt = MRBC_TT_EMPTY;</div>
 <div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span>      } <span class="keywordflow">else</span> {</div>
@@ -1375,7 +1375,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>    <span class="keywordflow">if</span>( jmp_ofs &gt; o ) {</div>
 <div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>      jmp_ofs = o;</div>
 <div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span> </div>
-<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>      <span class="keywordflow">if</span>( !(a &amp; FLAG_REST) &amp;&amp; mrbc_type(regs[0]) != MRBC_TT_PROC ) {</div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>      <span class="keywordflow">if</span>( !(a &amp; FLAG_REST) &amp;&amp; <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[0]) != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> ) {</div>
 <div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>        <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>( vm, MRBC_CLASS(ArgumentError), <span class="stringliteral">&quot;wrong number of arguments.&quot;</span>);</div>
 <div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>      }</div>
@@ -1398,7 +1398,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>  <span class="keywordflow">if</span>( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>-&gt;<a class="code hl_variable" href="struct_i_r_e_p.html#ace167f2d155531bfadd9589381be01cc">clen</a> ) {</div>
 <div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html">mrbc_irep_catch_handler</a> *handler = find_catch_handler_ensure(vm);</div>
 <div class="line"><a id="l01539" name="l01539"></a><span class="lineno"> 1539</span>    <span class="keywordflow">if</span>( handler ) {</div>
-<div class="line"><a id="l01540" name="l01540"></a><span class="lineno"> 1540</span>      assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == MRBC_TT_NIL );</div>
+<div class="line"><a id="l01540" name="l01540"></a><span class="lineno"> 1540</span>      assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
 <div class="line"><a id="l01541" name="l01541"></a><span class="lineno"> 1541</span> </div>
 <div class="line"><a id="l01542" name="l01542"></a><span class="lineno"> 1542</span>      <span class="comment">// Save the return value in the last+1 register.</span></div>
 <div class="line"><a id="l01543" name="l01543"></a><span class="lineno"> 1543</span>      regs[ vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>-&gt;<a class="code hl_variable" href="struct_i_r_e_p.html#af8cb8b214a6b5f14a92d008b265ff4bb">nregs</a> ] = regs[a];</div>
@@ -1419,13 +1419,13 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>  }</div>
 <div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span> </div>
 <div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>  <span class="comment">// not in initialize method, set return value.</span></div>
-<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>  <span class="keywordflow">if</span>( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a6410afb7ec6ac625428080b07b61e5a2">callinfo_tail</a>-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#a2856ae822d0948be09737d132a7d19c3">method_id</a> != MRBC_SYM(initialize) ) <span class="keywordflow">goto</span> SET_RETURN;</div>
+<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>  <span class="keywordflow">if</span>( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a6410afb7ec6ac625428080b07b61e5a2">callinfo_tail</a>-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#a2856ae822d0948be09737d132a7d19c3">method_id</a> != MRBC_SYM(initialize) ) <span class="keywordflow">goto</span> <a class="code hl_define" href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a>;</div>
 <div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span> </div>
 <div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>  <span class="comment">// not called by op_super, ignore return value.</span></div>
 <div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span>  <span class="keywordflow">if</span>( !vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a6410afb7ec6ac625428080b07b61e5a2">callinfo_tail</a>-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#a13b1b47d820ad101bf9304fd0067e215">is_called_super</a> ) <span class="keywordflow">goto</span> RETURN;</div>
 <div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span> </div>
 <div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>  <span class="comment">// set the return value</span></div>
-<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span> SET_RETURN:</div>
+<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span> <a class="code hl_define" href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a>:</div>
 <div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>  mrbc_decref(&amp;regs[0]);</div>
 <div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>  regs[0] = regs[a];</div>
 <div class="line"><a id="l01570" name="l01570"></a><span class="lineno"> 1570</span>  regs[a].tt = MRBC_TT_EMPTY;</div>
@@ -1449,7 +1449,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>{</div>
 <div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>  FETCH_B();</div>
 <div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span> </div>
-<div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>  <span class="keywordflow">if</span>( mrbc_type(regs[0]) != MRBC_TT_PROC ) {</div>
+<div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[0]) != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> ) {</div>
 <div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>    op_return__sub( vm, regs, a );</div>
 <div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>  }</div>
@@ -1465,7 +1465,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>    <span class="comment">// If have a ensure, jump to it.</span></div>
 <div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html">mrbc_irep_catch_handler</a> *handler = find_catch_handler_ensure(vm);</div>
 <div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>    <span class="keywordflow">if</span>( handler ) {</div>
-<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>      assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == MRBC_TT_NIL );</div>
+<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>      assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
 <div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span>      vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt = MRBC_TT_RETURN_BLK;</div>
 <div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>      vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>-&gt;<a class="code hl_variable" href="struct_i_r_e_p.html#a16a7d005dab4768c9f7693299a5ad7dc">inst</a> + bin_to_uint32(handler-&gt;<a class="code hl_variable" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html#a01ffabeb10edd665bbeb10af0829991f">target</a>);</div>
 <div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>      <span class="keywordflow">return</span>;</div>
@@ -1489,7 +1489,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span>    <a class="code hl_function" href="vm_8c.html#a4d2652e7557cec8eca462c4427f3a358">mrbc_pop_callinfo</a>(vm);</div>
 <div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>  }</div>
 <div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span> </div>
-<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = MRBC_TT_PROC, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
+<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a>, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
 <div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a> = 0;</div>
 <div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>}</div>
 <div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span> </div>
@@ -1499,7 +1499,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>{</div>
 <div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>  FETCH_B();</div>
 <div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span> </div>
-<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>  assert( regs[0].tt == MRBC_TT_PROC );</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>  assert( regs[0].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span> </div>
 <div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>  <span class="comment">// Save the return value in the proc object.</span></div>
 <div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>  mrbc_incref( &amp;regs[0] );</div>
@@ -1513,7 +1513,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>    <span class="comment">// If have a ensure, jump to it.</span></div>
 <div class="line"><a id="l01665" name="l01665"></a><span class="lineno"> 1665</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html">mrbc_irep_catch_handler</a> *handler = find_catch_handler_ensure(vm);</div>
 <div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>    <span class="keywordflow">if</span>( handler ) {</div>
-<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>      assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == MRBC_TT_NIL );</div>
+<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>      assert( vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
 <div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>      vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aa4ab0cf698c6bd0adbb6fa578ff2aee5">exception</a>.tt = MRBC_TT_BREAK;</div>
 <div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span>      vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aae15ec9bc827249886e2bff5095eb0cf">inst</a> = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>-&gt;<a class="code hl_variable" href="struct_i_r_e_p.html#a16a7d005dab4768c9f7693299a5ad7dc">inst</a> + bin_to_uint32(handler-&gt;<a class="code hl_variable" href="struct_i_r_e_p___c_a_t_c_h___h_a_n_d_l_e_r.html#a01ffabeb10edd665bbeb10af0829991f">target</a>);</div>
 <div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span>      <span class="keywordflow">return</span>;</div>
@@ -1531,7 +1531,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>  mrbc_decref(reg0);</div>
 <div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>  *reg0 = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>-&gt;ret_val;</div>
 <div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span> </div>
-<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = MRBC_TT_PROC, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
+<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>  mrbc_decref(&amp;(<a class="code hl_struct" href="struct_r_object.html">mrbc_value</a>){.tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a>, .proc = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a>});</div>
 <div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span>  vm-&gt;<a class="code hl_variable" href="struct_v_m.html#aca4521313a24601b58f88b7c663a65c9">ret_blk</a> = 0;</div>
 <div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span>}</div>
 <div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span> </div>
@@ -1560,12 +1560,12 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>    blk = regs + offset;</div>
 <div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>    <span class="comment">// upper env</span></div>
-<div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>    assert( regs[0].tt == MRBC_TT_PROC );</div>
+<div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>    assert( regs[0].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span> </div>
 <div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span>    <a class="code hl_struct" href="struct_c_a_l_l_i_n_f_o.html">mrbc_callinfo</a> *callinfo = regs[0].proc-&gt;callinfo_self;</div>
 <div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>    blk = callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#aab2e27bc8be925e4981651f50f60e970">cur_regs</a> + callinfo-&gt;<a class="code hl_variable" href="struct_c_a_l_l_i_n_f_o.html#af6c59ed0ef8625f73306604347b6034a">reg_offset</a> + offset;</div>
 <div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>  }</div>
-<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>  <span class="keywordflow">if</span>( blk-&gt;tt != MRBC_TT_PROC ) {</div>
+<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>  <span class="keywordflow">if</span>( blk-&gt;tt != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> ) {</div>
 <div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>    <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>( vm, MRBC_CLASS(Exception), <span class="stringliteral">&quot;no block given (yield)&quot;</span>);</div>
 <div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>  }</div>
@@ -1581,24 +1581,24 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>{</div>
 <div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>  FETCH_B();</div>
 <div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span> </div>
-<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_INTEGER ) {</div>
-<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Integer, Integer</span></div>
+<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
+<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Integer, Integer</span></div>
 <div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>      regs[a].i += regs[a+1].i;</div>
 <div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>    }</div>
 <div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span><span class="preprocessor">#if MRBC_USE_FLOAT</span></div>
-<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Integer, Float</span></div>
-<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>      regs[a].tt = MRBC_TT_FLOAT;</div>
+<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Integer, Float</span></div>
+<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>      regs[a].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a>;</div>
 <div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>      regs[a].d = regs[a].i + regs[a+1].d;</div>
 <div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>    }</div>
 <div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span>  }</div>
-<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_FLOAT ) {</div>
-<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Float, Integer</span></div>
+<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Float, Integer</span></div>
 <div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>      regs[a].d += regs[a+1].i;</div>
 <div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>    }</div>
-<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Float, Float</span></div>
+<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Float, Float</span></div>
 <div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>      regs[a].d += regs[a+1].d;</div>
 <div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>    }</div>
@@ -1615,13 +1615,13 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>{</div>
 <div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>  FETCH_BB();</div>
 <div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span> </div>
-<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_INTEGER ) {</div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
 <div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>    regs[a].i += b;</div>
 <div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>  }</div>
 <div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span> </div>
 <div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span><span class="preprocessor">#if MRBC_USE_FLOAT</span></div>
-<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_FLOAT ) {</div>
+<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
 <div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>    regs[a].d += b;</div>
 <div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>  }</div>
@@ -1636,24 +1636,24 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>{</div>
 <div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>  FETCH_B();</div>
 <div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span> </div>
-<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_INTEGER ) {</div>
-<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Integer, Integer</span></div>
+<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
+<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Integer, Integer</span></div>
 <div class="line"><a id="l01808" name="l01808"></a><span class="lineno"> 1808</span>      regs[a].i -= regs[a+1].i;</div>
 <div class="line"><a id="l01809" name="l01809"></a><span class="lineno"> 1809</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01810" name="l01810"></a><span class="lineno"> 1810</span>    }</div>
 <div class="line"><a id="l01811" name="l01811"></a><span class="lineno"> 1811</span><span class="preprocessor">#if MRBC_USE_FLOAT</span></div>
-<div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Integer, Float</span></div>
-<div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span>      regs[a].tt = MRBC_TT_FLOAT;</div>
+<div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Integer, Float</span></div>
+<div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span>      regs[a].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a>;</div>
 <div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>      regs[a].d = regs[a].i - regs[a+1].d;</div>
 <div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>    }</div>
 <div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>  }</div>
-<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_FLOAT ) {</div>
-<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Float, Integer</span></div>
+<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
+<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Float, Integer</span></div>
 <div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>      regs[a].d -= regs[a+1].i;</div>
 <div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>    }</div>
-<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Float, Float</span></div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Float, Float</span></div>
 <div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>      regs[a].d -= regs[a+1].d;</div>
 <div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>    }</div>
@@ -1670,13 +1670,13 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>{</div>
 <div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>  FETCH_BB();</div>
 <div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span> </div>
-<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_INTEGER ) {</div>
+<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
 <div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>    regs[a].i -= b;</div>
 <div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>  }</div>
 <div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span> </div>
 <div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span><span class="preprocessor">#if MRBC_USE_FLOAT</span></div>
-<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_FLOAT ) {</div>
+<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
 <div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>    regs[a].d -= b;</div>
 <div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>  }</div>
@@ -1691,24 +1691,24 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>{</div>
 <div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>  FETCH_B();</div>
 <div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span> </div>
-<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_INTEGER ) {</div>
-<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Integer, Integer</span></div>
+<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
+<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Integer, Integer</span></div>
 <div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>      regs[a].i *= regs[a+1].i;</div>
 <div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>    }</div>
 <div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span><span class="preprocessor">#if MRBC_USE_FLOAT</span></div>
-<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Integer, Float</span></div>
-<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>      regs[a].tt = MRBC_TT_FLOAT;</div>
+<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Integer, Float</span></div>
+<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>      regs[a].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a>;</div>
 <div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>      regs[a].d = regs[a].i * regs[a+1].d;</div>
 <div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>    }</div>
 <div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>  }</div>
-<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_FLOAT ) {</div>
-<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Float, Integer</span></div>
+<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
+<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Float, Integer</span></div>
 <div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>      regs[a].d *= regs[a+1].i;</div>
 <div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>    }</div>
-<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Float, Float</span></div>
+<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Float, Float</span></div>
 <div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>      regs[a].d *= regs[a+1].d;</div>
 <div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>    }</div>
@@ -1725,8 +1725,8 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>{</div>
 <div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>  FETCH_B();</div>
 <div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span> </div>
-<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_INTEGER ) {</div>
-<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Integer, Integer</span></div>
+<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
+<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Integer, Integer</span></div>
 <div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>      <span class="keywordflow">if</span>( regs[a+1].i == 0 ) {</div>
 <div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>        <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>(vm, MRBC_CLASS(ZeroDivisionError), 0 );</div>
 <div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>      } <span class="keywordflow">else</span> {</div>
@@ -1735,18 +1735,18 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>    }</div>
 <div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span><span class="preprocessor">#if MRBC_USE_FLOAT</span></div>
-<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Integer, Float</span></div>
-<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>      regs[a].tt = MRBC_TT_FLOAT;</div>
+<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Integer, Float</span></div>
+<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>      regs[a].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a>;</div>
 <div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>      regs[a].d = regs[a].i / regs[a+1].d;</div>
 <div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>    }</div>
 <div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>  }</div>
-<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_FLOAT ) {</div>
-<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_INTEGER ) {     <span class="comment">// in case of Float, Integer</span></div>
+<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
+<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {     <span class="comment">// in case of Float, Integer</span></div>
 <div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>      regs[a].d /= regs[a+1].i;</div>
 <div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>    }</div>
-<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>    <span class="keywordflow">if</span>( regs[a+1].tt == MRBC_TT_FLOAT ) {      <span class="comment">// in case of Float, Float</span></div>
+<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>    <span class="keywordflow">if</span>( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {      <span class="comment">// in case of Float, Float</span></div>
 <div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span>      regs[a].d /= regs[a+1].d;</div>
 <div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>    }</div>
@@ -1767,7 +1767,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span>  <span class="keywordtype">int</span> result = <a class="code hl_function" href="value_8c.html#a83fe06da224d5b63e113b7df8168a54d">mrbc_compare</a>(&amp;regs[a], &amp;regs[a+1]);</div>
 <div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span> </div>
 <div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span>  mrbc_decref(&amp;regs[a]);</div>
-<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span>  regs[a].tt = result ? MRBC_TT_FALSE : MRBC_TT_TRUE;</div>
+<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span>  regs[a].tt = result ? <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a> : <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a>;</div>
 <div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>}</div>
 <div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span> </div>
 <div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span> </div>
@@ -1780,7 +1780,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>  <span class="keywordtype">int</span> result = <a class="code hl_function" href="value_8c.html#a83fe06da224d5b63e113b7df8168a54d">mrbc_compare</a>(&amp;regs[a], &amp;regs[a+1]);</div>
 <div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span> </div>
 <div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>  mrbc_decref(&amp;regs[a]);</div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  regs[a].tt = result &lt; 0 ? MRBC_TT_TRUE : MRBC_TT_FALSE;</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  regs[a].tt = result &lt; 0 ? <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a> : <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a>;</div>
 <div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>}</div>
 <div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span> </div>
 <div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span> </div>
@@ -1793,7 +1793,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span>  <span class="keywordtype">int</span> result = <a class="code hl_function" href="value_8c.html#a83fe06da224d5b63e113b7df8168a54d">mrbc_compare</a>(&amp;regs[a], &amp;regs[a+1]);</div>
 <div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span> </div>
 <div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span>  mrbc_decref(&amp;regs[a]);</div>
-<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>  regs[a].tt = result &lt;= 0 ? MRBC_TT_TRUE : MRBC_TT_FALSE;</div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>  regs[a].tt = result &lt;= 0 ? <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a> : <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a>;</div>
 <div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>}</div>
 <div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span> </div>
 <div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span> </div>
@@ -1806,7 +1806,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>  <span class="keywordtype">int</span> result = <a class="code hl_function" href="value_8c.html#a83fe06da224d5b63e113b7df8168a54d">mrbc_compare</a>(&amp;regs[a], &amp;regs[a+1]);</div>
 <div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span> </div>
 <div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>  mrbc_decref(&amp;regs[a]);</div>
-<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>  regs[a].tt = result &gt; 0 ? MRBC_TT_TRUE : MRBC_TT_FALSE;</div>
+<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>  regs[a].tt = result &gt; 0 ? <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a> : <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a>;</div>
 <div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span>}</div>
 <div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span> </div>
 <div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span> </div>
@@ -1819,7 +1819,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>  <span class="keywordtype">int</span> result = <a class="code hl_function" href="value_8c.html#a83fe06da224d5b63e113b7df8168a54d">mrbc_compare</a>(&amp;regs[a], &amp;regs[a+1]);</div>
 <div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span> </div>
 <div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>  mrbc_decref(&amp;regs[a]);</div>
-<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>  regs[a].tt = result &gt;= 0 ? MRBC_TT_TRUE : MRBC_TT_FALSE;</div>
+<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>  regs[a].tt = result &gt;= 0 ? <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a> : <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a>;</div>
 <div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span>}</div>
 <div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span> </div>
 <div class="line"><a id="l02024" name="l02024"></a><span class="lineno"> 2024</span> </div>
@@ -1865,17 +1865,17 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>{</div>
 <div class="line"><a id="l02077" name="l02077"></a><span class="lineno"> 2077</span>  FETCH_B();</div>
 <div class="line"><a id="l02078" name="l02078"></a><span class="lineno"> 2078</span> </div>
-<div class="line"><a id="l02079" name="l02079"></a><span class="lineno"> 2079</span>  <span class="keywordflow">if</span>( regs[a].tt == MRBC_TT_NIL ) {</div>
+<div class="line"><a id="l02079" name="l02079"></a><span class="lineno"> 2079</span>  <span class="keywordflow">if</span>( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> ) {</div>
 <div class="line"><a id="l02080" name="l02080"></a><span class="lineno"> 2080</span>    <span class="comment">// arycat(nil, [...]) #=&gt; [...]</span></div>
-<div class="line"><a id="l02081" name="l02081"></a><span class="lineno"> 2081</span>    assert( regs[a+1].tt == MRBC_TT_ARRAY );</div>
+<div class="line"><a id="l02081" name="l02081"></a><span class="lineno"> 2081</span>    assert( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> );</div>
 <div class="line"><a id="l02082" name="l02082"></a><span class="lineno"> 2082</span>    regs[a] = regs[a+1];</div>
-<div class="line"><a id="l02083" name="l02083"></a><span class="lineno"> 2083</span>    regs[a+1].tt = MRBC_TT_NIL;</div>
+<div class="line"><a id="l02083" name="l02083"></a><span class="lineno"> 2083</span>    regs[a+1].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a>;</div>
 <div class="line"><a id="l02084" name="l02084"></a><span class="lineno"> 2084</span> </div>
 <div class="line"><a id="l02085" name="l02085"></a><span class="lineno"> 2085</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l02086" name="l02086"></a><span class="lineno"> 2086</span>  }</div>
 <div class="line"><a id="l02087" name="l02087"></a><span class="lineno"> 2087</span> </div>
-<div class="line"><a id="l02088" name="l02088"></a><span class="lineno"> 2088</span>  assert( regs[a  ].tt == MRBC_TT_ARRAY );</div>
-<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>  assert( regs[a+1].tt == MRBC_TT_ARRAY );</div>
+<div class="line"><a id="l02088" name="l02088"></a><span class="lineno"> 2088</span>  assert( regs[a  ].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> );</div>
+<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>  assert( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> );</div>
 <div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span> </div>
 <div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>  <span class="keywordtype">int</span> size_1 = regs[a  ].array-&gt;<a class="code hl_variable" href="struct_r_array.html#a4ac23b34a6f19950ed17e7e54e75ca96">n_stored</a>;</div>
 <div class="line"><a id="l02092" name="l02092"></a><span class="lineno"> 2092</span>  <span class="keywordtype">int</span> size_2 = regs[a+1].array-&gt;<a class="code hl_variable" href="struct_r_array.html#a4ac23b34a6f19950ed17e7e54e75ca96">n_stored</a>;</div>
@@ -1933,7 +1933,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02156" name="l02156"></a><span class="lineno"> 2156</span> </div>
 <div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span>  mrbc_decref( dst );</div>
 <div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span> </div>
-<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span>  <span class="keywordflow">if</span>( mrbc_type(*src) == MRBC_TT_ARRAY ) {</div>
+<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(*src) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> ) {</div>
 <div class="line"><a id="l02160" name="l02160"></a><span class="lineno"> 2160</span>    <span class="comment">// src is Array</span></div>
 <div class="line"><a id="l02161" name="l02161"></a><span class="lineno"> 2161</span>    *dst = <a class="code hl_function" href="c__array_8c.html#a4ef1809b76b3f1c8ba4bbdc213012632">mrbc_array_get</a>(src, c);</div>
 <div class="line"><a id="l02162" name="l02162"></a><span class="lineno"> 2162</span>    mrbc_incref(dst);</div>
@@ -1954,7 +1954,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span>{</div>
 <div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span>  FETCH_BBB();</div>
 <div class="line"><a id="l02183" name="l02183"></a><span class="lineno"> 2183</span> </div>
-<div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span>  assert( mrbc_type(regs[b]) == MRBC_TT_ARRAY );</div>
+<div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span>  assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[b]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> );</div>
 <div class="line"><a id="l02185" name="l02185"></a><span class="lineno"> 2185</span> </div>
 <div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span>  mrbc_incref( &amp;regs[b] );</div>
 <div class="line"><a id="l02187" name="l02187"></a><span class="lineno"> 2187</span>  <a class="code hl_function" href="c__array_8c.html#a4266711bd361eda8bcc3d2aa6d9b9816">mrbc_array_set</a>(&amp;regs[a], c, &amp;regs[b]);</div>
@@ -1967,7 +1967,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span>  FETCH_BBB();</div>
 <div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span> </div>
 <div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> src = regs[a];</div>
-<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  <span class="keywordflow">if</span>( mrbc_type(src) != MRBC_TT_ARRAY ) {</div>
+<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(src) != <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a> ) {</div>
 <div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>    src = <a class="code hl_function" href="c__array_8c.html#a747f16740034869e6f3cdc99d4084f0e">mrbc_array_new</a>(vm, 1);</div>
 <div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span>    src.array-&gt;<a class="code hl_variable" href="struct_r_array.html#a9482ac14246dd555b068f87804e342d0">data</a>[0] = regs[a];</div>
 <div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>    src.array-&gt;<a class="code hl_variable" href="struct_r_array.html#a4ac23b34a6f19950ed17e7e54e75ca96">n_stored</a> = 1;</div>
@@ -2003,7 +2003,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02238" name="l02238"></a><span class="lineno"> 2238</span>{</div>
 <div class="line"><a id="l02239" name="l02239"></a><span class="lineno"> 2239</span>  FETCH_B();</div>
 <div class="line"><a id="l02240" name="l02240"></a><span class="lineno"> 2240</span> </div>
-<div class="line"><a id="l02241" name="l02241"></a><span class="lineno"> 2241</span>  assert( regs[a].tt == MRBC_TT_STRING );</div>
+<div class="line"><a id="l02241" name="l02241"></a><span class="lineno"> 2241</span>  assert( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a341b86ad12f9fd670e068c4add871143">MRBC_TT_STRING</a> );</div>
 <div class="line"><a id="l02242" name="l02242"></a><span class="lineno"> 2242</span> </div>
 <div class="line"><a id="l02243" name="l02243"></a><span class="lineno"> 2243</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> sym_val = <a class="code hl_function" href="symbol_8c.html#a1c50a295f8cfdc0e9963d022c421d380">mrbc_symbol_new</a>(vm, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)regs[a].string-&gt;data);</div>
 <div class="line"><a id="l02244" name="l02244"></a><span class="lineno"> 2244</span> </div>
@@ -2018,7 +2018,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02257" name="l02257"></a><span class="lineno"> 2257</span>  FETCH_BB();</div>
 <div class="line"><a id="l02258" name="l02258"></a><span class="lineno"> 2258</span> </div>
 <div class="line"><a id="l02259" name="l02259"></a><span class="lineno"> 2259</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *p = (<span class="keyword">const</span> <span class="keywordtype">char</span> *)<a class="code hl_define" href="vm_8h.html#a25d486278abf67970bdc763f18baa400">mrbc_irep_pool_ptr</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
-<div class="line"><a id="l02260" name="l02260"></a><span class="lineno"> 2260</span>  mrbc_sym sym_id = <a class="code hl_function" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a>( p+3 );   <span class="comment">// 3 is TT and length</span></div>
+<div class="line"><a id="l02260" name="l02260"></a><span class="lineno"> 2260</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_function" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a>( p+3 );   <span class="comment">// 3 is TT and length</span></div>
 <div class="line"><a id="l02261" name="l02261"></a><span class="lineno"> 2261</span>  <span class="keywordflow">if</span>( sym_id &lt; 0 ) {</div>
 <div class="line"><a id="l02262" name="l02262"></a><span class="lineno"> 2262</span>    <a class="code hl_function" href="error_8c.html#a3a10c9df830572efe47d6a4df4c8ccae">mrbc_raise</a>(vm, MRBC_CLASS(Exception), <span class="stringliteral">&quot;Overflow MAX_SYMBOLS_COUNT&quot;</span>);</div>
 <div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>    <span class="keywordflow">return</span>;</div>
@@ -2141,14 +2141,14 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02413" name="l02413"></a><span class="lineno"> 2413</span>  FETCH_BB();</div>
 <div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span> </div>
 <div class="line"><a id="l02415" name="l02415"></a><span class="lineno"> 2415</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *class_name = <a class="code hl_define" href="vm_8h.html#a7589904fe587f039862c0049ef26e56f">mrbc_irep_symbol_cstr</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
-<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *super = (regs[a+1].tt == MRBC_TT_CLASS) ? regs[a+1].cls : 0;</div>
+<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *super = (regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a>) ? regs[a+1].cls : 0;</div>
 <div class="line"><a id="l02417" name="l02417"></a><span class="lineno"> 2417</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *cls = <a class="code hl_function" href="class_8c.html#afe2ecc71369716c4868b52dd603832a9">mrbc_define_class</a>(vm, class_name, super);</div>
 <div class="line"><a id="l02418" name="l02418"></a><span class="lineno"> 2418</span>  <span class="keywordflow">if</span>( !cls ) <span class="keywordflow">return</span>;            <span class="comment">// ENOMEM</span></div>
 <div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span> </div>
 <div class="line"><a id="l02420" name="l02420"></a><span class="lineno"> 2420</span>  <span class="comment">// (note)</span></div>
 <div class="line"><a id="l02421" name="l02421"></a><span class="lineno"> 2421</span>  <span class="comment">//  regs[a] was set to NIL by compiler. So, no need to release regs[a].</span></div>
-<div class="line"><a id="l02422" name="l02422"></a><span class="lineno"> 2422</span>  assert( mrbc_type(regs[a]) == MRBC_TT_NIL );</div>
-<div class="line"><a id="l02423" name="l02423"></a><span class="lineno"> 2423</span>  regs[a].tt = MRBC_TT_CLASS;</div>
+<div class="line"><a id="l02422" name="l02422"></a><span class="lineno"> 2422</span>  assert( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(regs[a]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a> );</div>
+<div class="line"><a id="l02423" name="l02423"></a><span class="lineno"> 2423</span>  regs[a].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a>;</div>
 <div class="line"><a id="l02424" name="l02424"></a><span class="lineno"> 2424</span>  regs[a].cls = cls;</div>
 <div class="line"><a id="l02425" name="l02425"></a><span class="lineno"> 2425</span>}</div>
 <div class="line"><a id="l02426" name="l02426"></a><span class="lineno"> 2426</span> </div>
@@ -2157,7 +2157,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span><span class="comment"></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> op_exec( <a class="code hl_struct" href="struct_v_m.html">mrbc_vm</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> *regs EXT )</div>
 <div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span>{</div>
 <div class="line"><a id="l02435" name="l02435"></a><span class="lineno"> 2435</span>  FETCH_BB();</div>
-<div class="line"><a id="l02436" name="l02436"></a><span class="lineno"> 2436</span>  assert( regs[a].tt == MRBC_TT_CLASS );</div>
+<div class="line"><a id="l02436" name="l02436"></a><span class="lineno"> 2436</span>  assert( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a> );</div>
 <div class="line"><a id="l02437" name="l02437"></a><span class="lineno"> 2437</span> </div>
 <div class="line"><a id="l02438" name="l02438"></a><span class="lineno"> 2438</span>  <span class="comment">// prepare callinfo</span></div>
 <div class="line"><a id="l02439" name="l02439"></a><span class="lineno"> 2439</span>  <a class="code hl_function" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a>(vm, 0, a, 0);</div>
@@ -2176,11 +2176,11 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02456" name="l02456"></a><span class="lineno"> 2456</span>{</div>
 <div class="line"><a id="l02457" name="l02457"></a><span class="lineno"> 2457</span>  FETCH_BB();</div>
 <div class="line"><a id="l02458" name="l02458"></a><span class="lineno"> 2458</span> </div>
-<div class="line"><a id="l02459" name="l02459"></a><span class="lineno"> 2459</span>  assert( regs[a].tt == MRBC_TT_CLASS );</div>
-<div class="line"><a id="l02460" name="l02460"></a><span class="lineno"> 2460</span>  assert( regs[a+1].tt == MRBC_TT_PROC );</div>
+<div class="line"><a id="l02459" name="l02459"></a><span class="lineno"> 2459</span>  assert( regs[a].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a> );</div>
+<div class="line"><a id="l02460" name="l02460"></a><span class="lineno"> 2460</span>  assert( regs[a+1].tt == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a> );</div>
 <div class="line"><a id="l02461" name="l02461"></a><span class="lineno"> 2461</span> </div>
 <div class="line"><a id="l02462" name="l02462"></a><span class="lineno"> 2462</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *cls = regs[a].cls;</div>
-<div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span>  mrbc_sym sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
+<div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
 <div class="line"><a id="l02464" name="l02464"></a><span class="lineno"> 2464</span>  <a class="code hl_struct" href="struct_r_proc.html">mrbc_proc</a> *proc = regs[a+1].proc;</div>
 <div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span>  <a class="code hl_struct" href="struct_r_method.html">mrbc_method</a> *method;</div>
 <div class="line"><a id="l02466" name="l02466"></a><span class="lineno"> 2466</span> </div>
@@ -2218,8 +2218,8 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span>{</div>
 <div class="line"><a id="l02503" name="l02503"></a><span class="lineno"> 2503</span>  FETCH_BB();</div>
 <div class="line"><a id="l02504" name="l02504"></a><span class="lineno"> 2504</span> </div>
-<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>  mrbc_sym sym_id_new = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, a);</div>
-<div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>  mrbc_sym sym_id_org = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
+<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id_new = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, a);</div>
+<div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>  <a class="code hl_typedef" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id_org = <a class="code hl_define" href="vm_8h.html#a325f0eec7f68323b7e44e2cae0bfa383">mrbc_irep_symbol_id</a>(vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a370b67524d15f76030a9cfa58214d99e">cur_irep</a>, b);</div>
 <div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span>  <a class="code hl_struct" href="struct_r_class.html">mrbc_class</a> *cls = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a0a107d51a0fc0fa7fc4e553d84c63c40">target_class</a>;</div>
 <div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span>  <a class="code hl_struct" href="struct_r_method.html">mrbc_method</a> *method = <a class="code hl_function" href="alloc_8c.html#a20488f515fa00a7f76e400191605d0e5">mrbc_raw_alloc</a>( <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_r_method.html">mrbc_method</a>) );</div>
 <div class="line"><a id="l02509" name="l02509"></a><span class="lineno"> 2509</span>  <span class="keywordflow">if</span>( !method ) <span class="keywordflow">return</span>; <span class="comment">// ENOMEM</span></div>
@@ -2263,7 +2263,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>  FETCH_B();</div>
 <div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span> </div>
 <div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>  mrbc_decref(&amp;regs[a]);</div>
-<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>  regs[a].tt = MRBC_TT_CLASS;</div>
+<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>  regs[a].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a>;</div>
 <div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>  regs[a].cls = vm-&gt;<a class="code hl_variable" href="struct_v_m.html#a0a107d51a0fc0fa7fc4e553d84c63c40">target_class</a>;</div>
 <div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>}</div>
 <div class="line"><a id="l02561" name="l02561"></a><span class="lineno"> 2561</span> </div>
@@ -2647,7 +2647,7 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="ttc" id="astruct_r_method_html_abf20f1d822ea5726edb9c413f9a22ee0"><div class="ttname"><a href="struct_r_method.html#abf20f1d822ea5726edb9c413f9a22ee0">RMethod::next</a></div><div class="ttdeci">struct RMethod * next</div><div class="ttdoc">link to next method.</div><div class="ttdef"><b>Definition:</b> <a href="class_8h_source.html#l00116">class.h:116</a></div></div>
 <div class="ttc" id="astruct_r_method_html_acace4055b7a714b8c2d3fd86644db0d0"><div class="ttname"><a href="struct_r_method.html#acace4055b7a714b8c2d3fd86644db0d0">RMethod::c_func</a></div><div class="ttdeci">uint8_t c_func</div><div class="ttdoc">0:IREP, 1:C Func, 2:C Func (built-in)</div><div class="ttdef"><b>Definition:</b> <a href="class_8h_source.html#l00109">class.h:109</a></div></div>
 <div class="ttc" id="astruct_r_method_html_ae3454879e84e0ef9651a18f53a881a70"><div class="ttname"><a href="struct_r_method.html#ae3454879e84e0ef9651a18f53a881a70">RMethod::func</a></div><div class="ttdeci">mrbc_func_t func</div><div class="ttdoc">to C function.</div><div class="ttdef"><b>Definition:</b> <a href="class_8h_source.html#l00113">class.h:113</a></div></div>
-<div class="ttc" id="astruct_r_object_html"><div class="ttname"><a href="struct_r_object.html">RObject</a></div><div class="ttdoc">Value object.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00148">value.h:148</a></div></div>
+<div class="ttc" id="astruct_r_object_html"><div class="ttname"><a href="struct_r_object.html">RObject</a></div><div class="ttdoc">Value object.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00150">value.h:150</a></div></div>
 <div class="ttc" id="astruct_r_proc_html"><div class="ttname"><a href="struct_r_proc.html">RProc</a></div><div class="ttdoc">Proc object.</div><div class="ttdef"><b>Definition:</b> <a href="class_8h_source.html#l00091">class.h:91</a></div></div>
 <div class="ttc" id="astruct_v_m_html"><div class="ttname"><a href="struct_v_m.html">VM</a></div><div class="ttdoc">Virtual Machine.</div><div class="ttdef"><b>Definition:</b> <a href="vm_8h_source.html#l00132">vm.h:132</a></div></div>
 <div class="ttc" id="astruct_v_m_html_a0a107d51a0fc0fa7fc4e553d84c63c40"><div class="ttname"><a href="struct_v_m.html#a0a107d51a0fc0fa7fc4e553d84c63c40">VM::target_class</a></div><div class="ttdeci">mrbc_class * target_class</div><div class="ttdoc">Target class.</div><div class="ttdef"><b>Definition:</b> <a href="vm_8h_source.html#l00148">vm.h:148</a></div></div>
@@ -2666,6 +2666,20 @@ $(document).ready(function(){initNavTree('vm_8c_source.html',''); initResizable(
 <div class="ttc" id="asymbol_8h_html"><div class="ttname"><a href="symbol_8h.html">symbol.h</a></div><div class="ttdoc">mruby/c Symbol class</div></div>
 <div class="ttc" id="avalue_8c_html_a83fe06da224d5b63e113b7df8168a54d"><div class="ttname"><a href="value_8c.html#a83fe06da224d5b63e113b7df8168a54d">mrbc_compare</a></div><div class="ttdeci">int mrbc_compare(const mrbc_value *v1, const mrbc_value *v2)</div><div class="ttdef"><b>Definition:</b> <a href="value_8c_source.html#l00075">value.c:75</a></div></div>
 <div class="ttc" id="avalue_8h_html"><div class="ttname"><a href="value_8h.html">value.h</a></div><div class="ttdoc">mruby/c value definitions</div></div>
+<div class="ttc" id="avalue_8h_html_aae11f2f5de54a0eaf65971994a06942f"><div class="ttname"><a href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a></div><div class="ttdeci">#define mrbc_type(o)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00191">value.h:191</a></div></div>
+<div class="ttc" id="avalue_8h_html_aba5245b1081a2354c9e3f1d2b31fea14"><div class="ttname"><a href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a></div><div class="ttdeci">int16_t mrbc_sym</div><div class="ttdoc">mruby/c symbol ID</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00059">value.h:59</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a></div><div class="ttdeci">@ MRBC_TT_FALSE</div><div class="ttdoc">FalseClass.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00079">value.h:79</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a341b86ad12f9fd670e068c4add871143"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a341b86ad12f9fd670e068c4add871143">MRBC_TT_STRING</a></div><div class="ttdeci">@ MRBC_TT_STRING</div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00094">value.h:94</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a></div><div class="ttdeci">@ MRBC_TT_FLOAT</div><div class="ttdoc">Float.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00085">value.h:85</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a></div><div class="ttdeci">@ MRBC_TT_INTEGER</div><div class="ttdoc">Integer.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00083">value.h:83</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323">MRBC_TT_EXCEPTION</a></div><div class="ttdeci">@ MRBC_TT_EXCEPTION</div><div class="ttdoc">Exception.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00097">value.h:97</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114">MRBC_TT_PROC</a></div><div class="ttdeci">@ MRBC_TT_PROC</div><div class="ttdoc">Proc.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00092">value.h:92</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55">MRBC_TT_ARRAY</a></div><div class="ttdeci">@ MRBC_TT_ARRAY</div><div class="ttdoc">Array.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00093">value.h:93</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a></div><div class="ttdeci">@ MRBC_TT_TRUE</div><div class="ttdoc">TrueClass.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00082">value.h:82</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a></div><div class="ttdeci">@ MRBC_TT_NIL</div><div class="ttdoc">NilClass.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00078">value.h:78</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90ae32c295eb7239f7d8523ec5468cd46ea"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae32c295eb7239f7d8523ec5468cd46ea">MRBC_TT_HASH</a></div><div class="ttdeci">@ MRBC_TT_HASH</div><div class="ttdoc">Hash.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00096">value.h:96</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464">MRBC_TT_CLASS</a></div><div class="ttdeci">@ MRBC_TT_CLASS</div><div class="ttdoc">Class.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00087">value.h:87</a></div></div>
+<div class="ttc" id="avalue_8h_html_ad9f2a139b3cdc06ee818426cb8805d76"><div class="ttname"><a href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a></div><div class="ttdeci">#define SET_RETURN(n)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00259">value.h:259</a></div></div>
 <div class="ttc" id="avm_8c_html_a099e1197cff9354df8334d69a46fa943"><div class="ttname"><a href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a></div><div class="ttdeci">mrbc_callinfo * mrbc_push_callinfo(struct VM *vm, mrbc_sym method_id, int reg_offset, int n_args)</div><div class="ttdef"><b>Definition:</b> <a href="vm_8c_source.html#l00235">vm.c:235</a></div></div>
 <div class="ttc" id="avm_8c_html_a4770d4b6b4d86ca925c2d769cb2642b2"><div class="ttname"><a href="vm_8c.html#a4770d4b6b4d86ca925c2d769cb2642b2">mrbc_vm_end</a></div><div class="ttdeci">void mrbc_vm_end(struct VM *vm)</div><div class="ttdef"><b>Definition:</b> <a href="vm_8c_source.html#l00381">vm.c:381</a></div></div>
 <div class="ttc" id="avm_8c_html_a4d2652e7557cec8eca462c4427f3a358"><div class="ttname"><a href="vm_8c.html#a4d2652e7557cec8eca462c4427f3a358">mrbc_pop_callinfo</a></div><div class="ttdeci">void mrbc_pop_callinfo(struct VM *vm)</div><div class="ttdef"><b>Definition:</b> <a href="vm_8c_source.html#l00261">vm.c:261</a></div></div>

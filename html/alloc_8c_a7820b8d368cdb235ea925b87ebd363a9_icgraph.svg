@@ -22,7 +22,7 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="symbol_8c.html#a1c50a295f8cfdc0e9963d022c421d380" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 98,-19.5 98,-0.5 0,-0.5"/>
+<polygon fill="white" stroke="red" points="0,-0.5 0,-19.5 98,-19.5 98,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="49" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">mrbc_symbol_new</text>
 </a>
 </g>

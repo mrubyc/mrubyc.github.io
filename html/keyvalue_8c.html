@@ -114,11 +114,11 @@ Functions</h2></td></tr>
 <tr class="separator:aaadb690b23d5c4cec82764c05b52cab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63cf63b86fa897a279700852f0b037c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#a63cf63b86fa897a279700852f0b037c9">mrbc_kv_resize</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, int size)</td></tr>
 <tr class="separator:a63cf63b86fa897a279700852f0b037c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab746465660964326970321d951852b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#afab746465660964326970321d951852b">mrbc_kv_set</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, mrbc_sym sym_id, <a class="el" href="struct_r_object.html">mrbc_value</a> *set_val)</td></tr>
+<tr class="memitem:afab746465660964326970321d951852b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#afab746465660964326970321d951852b">mrbc_kv_set</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, <a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id, <a class="el" href="struct_r_object.html">mrbc_value</a> *set_val)</td></tr>
 <tr class="separator:afab746465660964326970321d951852b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ca64c77e80539715506e17fd081c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_object.html">mrbc_value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#ae1ca64c77e80539715506e17fd081c01">mrbc_kv_get</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, mrbc_sym sym_id)</td></tr>
+<tr class="memitem:ae1ca64c77e80539715506e17fd081c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_object.html">mrbc_value</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#ae1ca64c77e80539715506e17fd081c01">mrbc_kv_get</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, <a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id)</td></tr>
 <tr class="separator:ae1ca64c77e80539715506e17fd081c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc3b8ddfd1a56706dd893880f9cfc53a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#adc3b8ddfd1a56706dd893880f9cfc53a">mrbc_kv_remove</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, mrbc_sym sym_id)</td></tr>
+<tr class="memitem:adc3b8ddfd1a56706dd893880f9cfc53a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#adc3b8ddfd1a56706dd893880f9cfc53a">mrbc_kv_remove</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh, <a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id)</td></tr>
 <tr class="separator:adc3b8ddfd1a56706dd893880f9cfc53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd3e4517d46cb25f4e28ffef3672ff9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyvalue_8c.html#abd3e4517d46cb25f4e28ffef3672ff9b">mrbc_kv_clear</a> (<a class="el" href="keyvalue_8h.html#a1c2649e2f3b3923420601074c1b1e85a">mrbc_kv_handle</a> *kvh)</td></tr>
 <tr class="separator:abd3e4517d46cb25f4e28ffef3672ff9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,7 +224,7 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a34">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a37">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="keyvalue_8c_source.html#l00139">139</a> of file <a class="el" href="keyvalue_8c_source.html">keyvalue.c</a>.</p>
@@ -296,7 +296,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mrbc_sym&#160;</td>
+          <td class="paramtype"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td>
           <td class="paramname"><em>sym_id</em>&#160;</td>
         </tr>
         <tr>
@@ -315,7 +315,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to mrbc_value or NULL. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a38">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a41">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="keyvalue_8c_source.html#l00258">258</a> of file <a class="el" href="keyvalue_8c_source.html">keyvalue.c</a>.</p>
@@ -369,7 +369,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if no error. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a29">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a32">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="keyvalue_8c_source.html#l00099">99</a> of file <a class="el" href="keyvalue_8c_source.html">keyvalue.c</a>.</p>
@@ -436,7 +436,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mrbc_sym&#160;</td>
+          <td class="paramtype"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td>
           <td class="paramname"><em>sym_id</em>&#160;</td>
         </tr>
         <tr>
@@ -520,7 +520,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mrbc_sym&#160;</td>
+          <td class="paramtype"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td>
           <td class="paramname"><em>sym_id</em>, </td>
         </tr>
         <tr>
@@ -546,7 +546,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mrbc_error_code. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a36">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a39">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="keyvalue_8c_source.html#l00199">199</a> of file <a class="el" href="keyvalue_8c_source.html">keyvalue.c</a>.</p>

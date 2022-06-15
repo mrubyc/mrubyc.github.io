@@ -111,11 +111,11 @@ Include dependency graph for symbol.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:aa5223676806c71c50d18f74b4fb1f059"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#aa5223676806c71c50d18f74b4fb1f059">mrbc_cleanup_symbol</a> (void)</td></tr>
 <tr class="separator:aa5223676806c71c50d18f74b4fb1f059"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a574b10e4497bc1e0dea82b615046eed5"><td class="memItemLeft" align="right" valign="top">mrbc_sym&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a> (const char *str)</td></tr>
+<tr class="memitem:a574b10e4497bc1e0dea82b615046eed5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a574b10e4497bc1e0dea82b615046eed5">mrbc_str_to_symid</a> (const char *str)</td></tr>
 <tr class="separator:a574b10e4497bc1e0dea82b615046eed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae45634d8c243e5695b34e5cd0e43311"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#aae45634d8c243e5695b34e5cd0e43311">mrbc_symid_to_str</a> (mrbc_sym sym_id)</td></tr>
+<tr class="memitem:aae45634d8c243e5695b34e5cd0e43311"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#aae45634d8c243e5695b34e5cd0e43311">mrbc_symid_to_str</a> (<a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> sym_id)</td></tr>
 <tr class="separator:aae45634d8c243e5695b34e5cd0e43311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a093bafc9e16d180f68c65762d83321c0"><td class="memItemLeft" align="right" valign="top">mrbc_sym&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a093bafc9e16d180f68c65762d83321c0">mrbc_search_symid</a> (const char *str)</td></tr>
+<tr class="memitem:a093bafc9e16d180f68c65762d83321c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a093bafc9e16d180f68c65762d83321c0">mrbc_search_symid</a> (const char *str)</td></tr>
 <tr class="separator:a093bafc9e16d180f68c65762d83321c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c50a295f8cfdc0e9963d022c421d380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_object.html">mrbc_value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a1c50a295f8cfdc0e9963d022c421d380">mrbc_symbol_new</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm, const char *str)</td></tr>
 <tr class="separator:a1c50a295f8cfdc0e9963d022c421d380"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +165,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">mrbc_sym mrbc_search_symid </td>
+          <td class="memname"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> mrbc_search_symid </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
@@ -181,7 +181,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>symbol id. or -1 if not registered. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a57">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a61">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="symbol_8c_source.html#l00264">264</a> of file <a class="el" href="symbol_8c_source.html">symbol.c</a>.</p>
@@ -201,7 +201,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">mrbc_sym mrbc_str_to_symid </td>
+          <td class="memname"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> mrbc_str_to_symid </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
@@ -272,6 +272,12 @@ Here is the call graph for this function:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="symbol_8c_a1c50a295f8cfdc0e9963d022c421d380_cgraph.svg" width="352" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="symbol_8c_a1c50a295f8cfdc0e9963d022c421d380_icgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -284,7 +290,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">const char * mrbc_symid_to_str </td>
           <td>(</td>
-          <td class="paramtype">mrbc_sym&#160;</td>
+          <td class="paramtype"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td>
           <td class="paramname"><em>sym_id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -306,6 +312,12 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="symbol_8c_source.html#l00244">244</a> of file <a class="el" href="symbol_8c_source.html">symbol.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="symbol_8c_aae45634d8c243e5695b34e5cd0e43311_icgraph.svg" width="339" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

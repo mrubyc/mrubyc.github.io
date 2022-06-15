@@ -117,11 +117,11 @@ Include dependency graph for vm.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:ac331f49fbf40402c6fe3518b1212130d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#ac331f49fbf40402c6fe3518b1212130d">mrbc_cleanup_vm</a> (void)</td></tr>
 <tr class="separator:ac331f49fbf40402c6fe3518b1212130d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80fe3c47c221545a490e60b00f0fb289"><td class="memItemLeft" align="right" valign="top">mrbc_sym&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a80fe3c47c221545a490e60b00f0fb289">mrbc_get_callee_symid</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
+<tr class="memitem:a80fe3c47c221545a490e60b00f0fb289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a80fe3c47c221545a490e60b00f0fb289">mrbc_get_callee_symid</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
 <tr class="separator:a80fe3c47c221545a490e60b00f0fb289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e84482a6daa5958a4f66cabcefd7a3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#ae3e84482a6daa5958a4f66cabcefd7a3">mrbc_get_callee_name</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
 <tr class="separator:ae3e84482a6daa5958a4f66cabcefd7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099e1197cff9354df8334d69a46fa943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vm_8h.html#a301bd3a87618e9b5ffe7ba1576543b29">mrbc_callinfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm, mrbc_sym method_id, int reg_offset, int n_args)</td></tr>
+<tr class="memitem:a099e1197cff9354df8334d69a46fa943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vm_8h.html#a301bd3a87618e9b5ffe7ba1576543b29">mrbc_callinfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm, <a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> method_id, int reg_offset, int n_args)</td></tr>
 <tr class="separator:a099e1197cff9354df8334d69a46fa943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d2652e7557cec8eca462c4427f3a358"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a4d2652e7557cec8eca462c4427f3a358">mrbc_pop_callinfo</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
 <tr class="separator:a4d2652e7557cec8eca462c4427f3a358"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +211,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">mrbc_sym mrbc_get_callee_symid </td>
+          <td class="memname"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> mrbc_get_callee_symid </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="struct_v_m.html">VM</a> *&#160;</td>
           <td class="paramname"><em>vm</em></td><td>)</td>
@@ -268,7 +268,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mrbc_sym&#160;</td>
+          <td class="paramtype"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td>
           <td class="paramname"><em>method_id</em>, </td>
         </tr>
         <tr>
@@ -318,7 +318,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a64">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a68">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00354">354</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
@@ -380,7 +380,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a66">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a70">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00381">381</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
@@ -463,7 +463,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a65">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a69">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l02612">2612</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>

@@ -128,7 +128,7 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a0183fddcde3def0a79f17717573cfa2c"><td class="memItemLeft" align="right" valign="top"><a id="a0183fddcde3def0a79f17717573cfa2c" name="a0183fddcde3def0a79f17717573cfa2c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>mrbc_irep_tbl_syms</b>(irep)&#160;&#160;&#160;((mrbc_sym *)(irep)-&gt;data)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>mrbc_irep_tbl_syms</b>(irep)&#160;&#160;&#160;((<a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> *)(irep)-&gt;data)</td></tr>
 <tr class="memdesc:a0183fddcde3def0a79f17717573cfa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a symbol id table pointer. <br /></td></tr>
 <tr class="separator:a0183fddcde3def0a79f17717573cfa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325f0eec7f68323b7e44e2cae0bfa383"><td class="memItemLeft" align="right" valign="top"><a id="a325f0eec7f68323b7e44e2cae0bfa383" name="a325f0eec7f68323b7e44e2cae0bfa383"></a>
@@ -140,7 +140,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a7589904fe587f039862c0049ef26e56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a n'th symbol string in irep <br /></td></tr>
 <tr class="separator:a7589904fe587f039862c0049ef26e56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a643d8e3e6e1c7efcb6ac60ba465315fb"><td class="memItemLeft" align="right" valign="top"><a id="a643d8e3e6e1c7efcb6ac60ba465315fb" name="a643d8e3e6e1c7efcb6ac60ba465315fb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>mrbc_irep_tbl_pools</b>(irep)&#160;&#160;&#160;  ( (uint16_t *) ((irep)-&gt;data + (irep)-&gt;slen * sizeof(mrbc_sym)) )</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>mrbc_irep_tbl_pools</b>(irep)&#160;&#160;&#160;  ( (uint16_t *) ((irep)-&gt;data + (irep)-&gt;slen * sizeof(<a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>)) )</td></tr>
 <tr class="memdesc:a643d8e3e6e1c7efcb6ac60ba465315fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a pool data offset table pointer. <br /></td></tr>
 <tr class="separator:a643d8e3e6e1c7efcb6ac60ba465315fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25d486278abf67970bdc763f18baa400"><td class="memItemLeft" align="right" valign="top"><a id="a25d486278abf67970bdc763f18baa400" name="a25d486278abf67970bdc763f18baa400"></a>
@@ -179,11 +179,11 @@ typedef struct <a class="el" href="struct_v_m.html">VM</a>&#160;</td><td class="
 Functions</h2></td></tr>
 <tr class="memitem:ac331f49fbf40402c6fe3518b1212130d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#ac331f49fbf40402c6fe3518b1212130d">mrbc_cleanup_vm</a> (void)</td></tr>
 <tr class="separator:ac331f49fbf40402c6fe3518b1212130d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80fe3c47c221545a490e60b00f0fb289"><td class="memItemLeft" align="right" valign="top">mrbc_sym&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a80fe3c47c221545a490e60b00f0fb289">mrbc_get_callee_symid</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
+<tr class="memitem:a80fe3c47c221545a490e60b00f0fb289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a80fe3c47c221545a490e60b00f0fb289">mrbc_get_callee_symid</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
 <tr class="separator:a80fe3c47c221545a490e60b00f0fb289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e84482a6daa5958a4f66cabcefd7a3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#ae3e84482a6daa5958a4f66cabcefd7a3">mrbc_get_callee_name</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
 <tr class="separator:ae3e84482a6daa5958a4f66cabcefd7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099e1197cff9354df8334d69a46fa943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vm_8h.html#a301bd3a87618e9b5ffe7ba1576543b29">mrbc_callinfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm, mrbc_sym method_id, int reg_offset, int n_args)</td></tr>
+<tr class="memitem:a099e1197cff9354df8334d69a46fa943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vm_8h.html#a301bd3a87618e9b5ffe7ba1576543b29">mrbc_callinfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a099e1197cff9354df8334d69a46fa943">mrbc_push_callinfo</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm, <a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> method_id, int reg_offset, int n_args)</td></tr>
 <tr class="separator:a099e1197cff9354df8334d69a46fa943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d2652e7557cec8eca462c4427f3a358"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a4d2652e7557cec8eca462c4427f3a358">mrbc_pop_callinfo</a> (struct <a class="el" href="struct_v_m.html">VM</a> *vm)</td></tr>
 <tr class="separator:a4d2652e7557cec8eca462c4427f3a358"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,7 +273,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">mrbc_sym mrbc_get_callee_symid </td>
+          <td class="memname"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a> mrbc_get_callee_symid </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="struct_v_m.html">VM</a> *&#160;</td>
           <td class="paramname"><em>vm</em></td><td>)</td>
@@ -330,7 +330,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mrbc_sym&#160;</td>
+          <td class="paramtype"><a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14">mrbc_sym</a>&#160;</td>
           <td class="paramname"><em>method_id</em>, </td>
         </tr>
         <tr>

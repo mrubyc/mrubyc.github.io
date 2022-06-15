@@ -117,11 +117,11 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_bitref(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordflow">if</span>( mrbc_integer(v[1]) &lt; 0 ) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    SET_INT_RETURN( 0 );</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]) &lt; 0 ) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( 0 );</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    mrbc_int mask = (argc == 1) ? 1 : (1 &lt;&lt; mrbc_fixnum(v[2])) - 1;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    SET_INT_RETURN( (mrbc_fixnum(v[0]) &gt;&gt; mrbc_fixnum(v[1])) &amp; mask );</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( (mrbc_fixnum(v[0]) &gt;&gt; mrbc_fixnum(v[1])) &amp; mask );</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
@@ -136,28 +136,28 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_negative(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  mrbc_int num = mrbc_integer(v[0]);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  SET_INT_RETURN( -num );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  mrbc_int num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( -num );</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_power(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span>( mrbc_type(v[1]) == MRBC_TT_INTEGER ) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(v[1]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a> ) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    mrbc_int x = 1;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">int</span> i;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span>( mrbc_integer(v[1]) &lt; 0 ) x = 0;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">for</span>( i = 0; i &lt; mrbc_integer(v[1]); i++ ) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      x *= mrbc_integer(v[0]);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]) &lt; 0 ) x = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">for</span>( i = 0; i &lt; <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]); i++ ) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      x *= <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    SET_INT_RETURN( x );</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( x );</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#if MRBC_USE_FLOAT &amp;&amp; MRBC_USE_MATH</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span>( mrbc_type(v[1]) == MRBC_TT_FLOAT ) {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    SET_FLOAT_RETURN( pow( mrbc_integer(v[0]), mrbc_float(v[1])));</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(v[1]) == <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a> ) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_define" href="value_8h.html#af8c6fbf7c530079965e15e53416400d5">SET_FLOAT_RETURN</a>( pow( <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]), <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[1])));</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
@@ -166,40 +166,40 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_mod(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  mrbc_int num = mrbc_integer(v[1]);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  SET_INT_RETURN( v-&gt;i % num );</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  mrbc_int num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( v-&gt;i % num );</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_and(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  mrbc_int num = mrbc_integer(v[1]);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  SET_INT_RETURN(v-&gt;i &amp; num);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  mrbc_int num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>(v-&gt;i &amp; num);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_or(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  mrbc_int num = mrbc_integer(v[1]);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  SET_INT_RETURN(v-&gt;i | num);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  mrbc_int num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>(v-&gt;i | num);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_xor(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  mrbc_int num = mrbc_integer(v[1]);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  SET_INT_RETURN( v-&gt;i ^ num );</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  mrbc_int num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( v-&gt;i ^ num );</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_not(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>{</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  mrbc_int num = mrbc_integer(v[0]);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  SET_INT_RETURN( ~num );</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  mrbc_int num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( ~num );</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
@@ -219,24 +219,24 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_lshift(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>{</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordtype">int</span> num = mrbc_integer(v[1]);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  SET_INT_RETURN( shift(v-&gt;i, num) );</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordtype">int</span> num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( shift(v-&gt;i, num) );</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_rshift(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>{</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordtype">int</span> num = mrbc_integer(v[1]);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  SET_INT_RETURN( shift(v-&gt;i, -num) );</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordtype">int</span> num = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( shift(v-&gt;i, -num) );</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_abs(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="keywordflow">if</span>( mrbc_integer(v[0]) &lt; 0 ) {</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    mrbc_integer(v[0]) = -mrbc_integer(v[0]);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]) &lt; 0 ) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]) = -<a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>}</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
@@ -245,8 +245,8 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_to_f(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>{</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  mrbc_float f = mrbc_integer(v[0]);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  SET_FLOAT_RETURN( f );</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a> f = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <a class="code hl_define" href="value_8h.html#af8c6fbf7c530079965e15e53416400d5">SET_FLOAT_RETURN</a>( f );</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
@@ -255,10 +255,10 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_integer_chr(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>{</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordtype">char</span> buf[2] = { mrbc_integer(v[0]) };</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordtype">char</span> buf[2] = { <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[0]) };</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> value = mrbc_string_new(vm, buf, 1);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  SET_RETURN(value);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <a class="code hl_define" href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a>(value);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
@@ -267,7 +267,7 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>{</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordtype">int</span> base = 10;</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <span class="keywordflow">if</span>( argc ) {</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    base = mrbc_integer(v[1]);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    base = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]);</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordflow">if</span>( base &lt; 2 || base &gt; 36 ) {</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      <span class="keywordflow">return</span>;   <span class="comment">// raise ? ArgumentError</span></div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
@@ -281,7 +281,7 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  mrbc_printf_end( &amp;pf );</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> value = mrbc_string_new_cstr(vm, buf);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  SET_RETURN(value);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <a class="code hl_define" href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a>(value);</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
@@ -330,8 +330,8 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_float_negative(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>{</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  mrbc_float num = mrbc_float(v[0]);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  SET_FLOAT_RETURN( -num );</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a> num = <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[0]);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  <a class="code hl_define" href="value_8h.html#af8c6fbf7c530079965e15e53416400d5">SET_FLOAT_RETURN</a>( -num );</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>}</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
@@ -339,14 +339,14 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_float_power(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>{</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  mrbc_float n = 0;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <span class="keywordflow">switch</span>( mrbc_type(v[1]) ) {</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="keywordflow">case</span> MRBC_TT_INTEGER: n = mrbc_integer(v[1]); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="keywordflow">case</span> MRBC_TT_FLOAT:   n = mrbc_float(v[1]);   <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a> n = 0;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <span class="keywordflow">switch</span>( <a class="code hl_define" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(v[1]) ) {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a>: n = <a class="code hl_define" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(v[1]); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a>:   n = <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[1]);   <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordflow">default</span>:                                      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  }</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  SET_FLOAT_RETURN( pow( mrbc_float(v[0]), n ));</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <a class="code hl_define" href="value_8h.html#af8c6fbf7c530079965e15e53416400d5">SET_FLOAT_RETURN</a>( pow( <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[0]), n ));</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>}</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
@@ -354,8 +354,8 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_float_abs(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>{</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keywordflow">if</span>( mrbc_float(v[0]) &lt; 0 ) {</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    mrbc_float(v[0]) = -mrbc_float(v[0]);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keywordflow">if</span>( <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[0]) &lt; 0 ) {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[0]) = -<a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[0]);</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  }</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
@@ -363,8 +363,8 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="comment">//================================================================</span></div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment"></span><span class="keyword">static</span> <span class="keywordtype">void</span> c_float_to_i(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_v_m.html">VM</a> *vm, <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> v[], <span class="keywordtype">int</span> argc)</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>{</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  mrbc_int i = (mrbc_int)mrbc_float(v[0]);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  SET_INT_RETURN( i );</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  mrbc_int i = (mrbc_int)<a class="code hl_define" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(v[0]);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <a class="code hl_define" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>( i );</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>}</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
@@ -376,7 +376,7 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  snprintf( buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;%g&quot;</span>, v-&gt;d );</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  <a class="code hl_struct" href="struct_r_object.html">mrbc_value</a> value = mrbc_string_new_cstr(vm, buf);</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  SET_RETURN(value);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  <a class="code hl_define" href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a>(value);</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>}</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
@@ -406,11 +406,19 @@ $(document).ready(function(){initNavTree('c__numeric_8c_source.html',''); initRe
 <div class="ttc" id="aclass_8h_html"><div class="ttname"><a href="class_8h.html">class.h</a></div><div class="ttdoc">Class related functions.</div></div>
 <div class="ttc" id="aconsole_8c_html_a574a5844ab0466939e4ff28d323b13e9"><div class="ttname"><a href="console_8c.html#a574a5844ab0466939e4ff28d323b13e9">mrbc_printf_int</a></div><div class="ttdeci">int mrbc_printf_int(mrbc_printf_t *pf, mrbc_int value, unsigned int base)</div><div class="ttdef"><b>Definition:</b> <a href="console_8c_source.html#l00666">console.c:666</a></div></div>
 <div class="ttc" id="aconsole_8h_html"><div class="ttname"><a href="console_8h.html">console.h</a></div><div class="ttdoc">console output module. (not yet input)</div></div>
-<div class="ttc" id="astruct_r_object_html"><div class="ttname"><a href="struct_r_object.html">RObject</a></div><div class="ttdoc">Value object.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00148">value.h:148</a></div></div>
+<div class="ttc" id="astruct_r_object_html"><div class="ttname"><a href="struct_r_object.html">RObject</a></div><div class="ttdoc">Value object.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00150">value.h:150</a></div></div>
 <div class="ttc" id="astruct_r_printf_format_html_aeb39a834208590870a5aa3bec3447cc6"><div class="ttname"><a href="struct_r_printf_format.html#aeb39a834208590870a5aa3bec3447cc6">RPrintfFormat::type</a></div><div class="ttdeci">char type</div><div class="ttdoc">format char. (e.g. 'd','f','x'...)</div><div class="ttdef"><b>Definition:</b> <a href="console_8h_source.html#l00048">console.h:48</a></div></div>
 <div class="ttc" id="astruct_r_printf_html"><div class="ttname"><a href="struct_r_printf.html">RPrintf</a></div><div class="ttdoc">printf tiny (mruby/c) version data container.</div><div class="ttdef"><b>Definition:</b> <a href="console_8h_source.html#l00062">console.h:62</a></div></div>
 <div class="ttc" id="astruct_v_m_html"><div class="ttname"><a href="struct_v_m.html">VM</a></div><div class="ttdoc">Virtual Machine.</div><div class="ttdef"><b>Definition:</b> <a href="vm_8h_source.html#l00132">vm.h:132</a></div></div>
 <div class="ttc" id="avalue_8h_html"><div class="ttname"><a href="value_8h.html">value.h</a></div><div class="ttdoc">mruby/c value definitions</div></div>
+<div class="ttc" id="avalue_8h_html_a4bf0d67f18ec59e60d5f9cf3aa7e66d4"><div class="ttname"><a href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a></div><div class="ttdeci">#define SET_INT_RETURN(n)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00281">value.h:281</a></div></div>
+<div class="ttc" id="avalue_8h_html_aae11f2f5de54a0eaf65971994a06942f"><div class="ttname"><a href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a></div><div class="ttdeci">#define mrbc_type(o)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00191">value.h:191</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a></div><div class="ttdeci">@ MRBC_TT_FLOAT</div><div class="ttdoc">Float.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00085">value.h:85</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a></div><div class="ttdeci">@ MRBC_TT_INTEGER</div><div class="ttdoc">Integer.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00083">value.h:83</a></div></div>
+<div class="ttc" id="avalue_8h_html_ad2f37afe1c4f1c556330803f46d19064"><div class="ttname"><a href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a></div><div class="ttdeci">#define mrbc_float(o)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00193">value.h:193</a></div></div>
+<div class="ttc" id="avalue_8h_html_ad9f2a139b3cdc06ee818426cb8805d76"><div class="ttname"><a href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a></div><div class="ttdeci">#define SET_RETURN(n)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00259">value.h:259</a></div></div>
+<div class="ttc" id="avalue_8h_html_ade5de1eca0f940a3df5dec133bc40420"><div class="ttname"><a href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a></div><div class="ttdeci">#define mrbc_integer(o)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00192">value.h:192</a></div></div>
+<div class="ttc" id="avalue_8h_html_af8c6fbf7c530079965e15e53416400d5"><div class="ttname"><a href="value_8h.html#af8c6fbf7c530079965e15e53416400d5">SET_FLOAT_RETURN</a></div><div class="ttdeci">#define SET_FLOAT_RETURN(n)</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00287">value.h:287</a></div></div>
 <div class="ttc" id="avm__config_8h_html"><div class="ttname"><a href="vm__config_8h.html">vm_config.h</a></div><div class="ttdoc">Global configration of mruby/c VM's.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

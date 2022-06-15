@@ -70,7 +70,8 @@ var menudata={children:[
 {text:"c",url:"globals.html#index_c"},
 {text:"i",url:"globals_i.html#index_i"},
 {text:"m",url:"globals_m.html#index_m"},
-{text:"o",url:"globals_o.html#index_o"}]},
+{text:"o",url:"globals_o.html#index_o"},
+{text:"s",url:"globals_s.html#index_s"}]},
 {text:"Functions",url:"globals_func.html",children:[
 {text:"c",url:"globals_func.html#index_c"},
 {text:"m",url:"globals_func_m.html#index_m"}]},
@@ -78,6 +79,7 @@ var menudata={children:[
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html",children:[
+{text:"m",url:"globals_eval.html#index_m"},
 {text:"o",url:"globals_eval.html#index_o"}]},
 {text:"Macros",url:"globals_defs.html"}]}]},
 {text:"Examples",url:"examples.html"}]}

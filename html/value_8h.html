@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('value_8h.html',''); initResizable(); }
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -114,12 +115,40 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1aa8383ace2a6185b5b9d02c72d05e59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a1aa8383ace2a6185b5b9d02c72d05e59">MRBC_OBJECT_HEADER</a>&#160;&#160;&#160;uint16_t ref_count</td></tr>
-<tr class="separator:a1aa8383ace2a6185b5b9d02c72d05e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae11f2f5de54a0eaf65971994a06942f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#aae11f2f5de54a0eaf65971994a06942f">mrbc_type</a>(o)&#160;&#160;&#160;((o).tt)</td></tr>
+<tr class="separator:aae11f2f5de54a0eaf65971994a06942f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade5de1eca0f940a3df5dec133bc40420"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#ade5de1eca0f940a3df5dec133bc40420">mrbc_integer</a>(o)&#160;&#160;&#160;((o).i)</td></tr>
+<tr class="separator:ade5de1eca0f940a3df5dec133bc40420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f37afe1c4f1c556330803f46d19064"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#ad2f37afe1c4f1c556330803f46d19064">mrbc_float</a>(o)&#160;&#160;&#160;((o).d)</td></tr>
+<tr class="separator:ad2f37afe1c4f1c556330803f46d19064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e72eb3baf967a1c5c917286691f5c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a36e72eb3baf967a1c5c917286691f5c0">mrbc_symbol</a>(o)&#160;&#160;&#160;((o).i)</td></tr>
+<tr class="separator:a36e72eb3baf967a1c5c917286691f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f2a139b3cdc06ee818426cb8805d76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#ad9f2a139b3cdc06ee818426cb8805d76">SET_RETURN</a>(n)</td></tr>
+<tr class="separator:ad9f2a139b3cdc06ee818426cb8805d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b19154eced2cfb5303619073c40558"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a61b19154eced2cfb5303619073c40558">SET_NIL_RETURN</a>()</td></tr>
+<tr class="separator:a61b19154eced2cfb5303619073c40558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a162c63031c2111b2986340a4b20ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#ae8a162c63031c2111b2986340a4b20ab">SET_FALSE_RETURN</a>()</td></tr>
+<tr class="separator:ae8a162c63031c2111b2986340a4b20ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f25f7b148f8e907136ab79039f523a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a92f25f7b148f8e907136ab79039f523a">SET_TRUE_RETURN</a>()</td></tr>
+<tr class="separator:a92f25f7b148f8e907136ab79039f523a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46183afd3c9c5f68ed3181294cc3e90b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a46183afd3c9c5f68ed3181294cc3e90b">SET_BOOL_RETURN</a>(n)</td></tr>
+<tr class="separator:a46183afd3c9c5f68ed3181294cc3e90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf0d67f18ec59e60d5f9cf3aa7e66d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">SET_INT_RETURN</a>(n)</td></tr>
+<tr class="separator:a4bf0d67f18ec59e60d5f9cf3aa7e66d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c6fbf7c530079965e15e53416400d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#af8c6fbf7c530079965e15e53416400d5">SET_FLOAT_RETURN</a>(n)</td></tr>
+<tr class="separator:af8c6fbf7c530079965e15e53416400d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aba5245b1081a2354c9e3f1d2b31fea14"><td class="memItemLeft" align="right" valign="top"><a id="aba5245b1081a2354c9e3f1d2b31fea14" name="aba5245b1081a2354c9e3f1d2b31fea14"></a>
+typedef int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>mrbc_sym</b></td></tr>
+<tr class="memdesc:aba5245b1081a2354c9e3f1d2b31fea14"><td class="mdescLeft">&#160;</td><td class="mdescRight">mruby/c symbol ID <br /></td></tr>
+<tr class="separator:aba5245b1081a2354c9e3f1d2b31fea14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac23e434e418c857c87f2f18e8128aa90"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90">mrbc_vtype</a> </td></tr>
+<tr class="memitem:ac23e434e418c857c87f2f18e8128aa90"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90">mrbc_vtype</a> { <br />
+ }</td></tr>
 <tr class="separator:ac23e434e418c857c87f2f18e8128aa90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84403b9ef379650570ad6197af679c72"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="value_8h.html#a84403b9ef379650570ad6197af679c72">mrbc_error_code</a> </td></tr>
 <tr class="separator:a84403b9ef379650570ad6197af679c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,20 +177,272 @@ This file is distributed under BSD 3-Clause License.
 </pre> 
 <p class="definition">Definition in file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a1aa8383ace2a6185b5b9d02c72d05e59" name="a1aa8383ace2a6185b5b9d02c72d05e59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aa8383ace2a6185b5b9d02c72d05e59">&#9670;&nbsp;</a></span>MRBC_OBJECT_HEADER</h2>
+<a id="ad2f37afe1c4f1c556330803f46d19064" name="ad2f37afe1c4f1c556330803f46d19064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f37afe1c4f1c556330803f46d19064">&#9670;&nbsp;</a></span>mrbc_float</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MRBC_OBJECT_HEADER&#160;&#160;&#160;uint16_t ref_count</td>
+          <td class="memname">#define mrbc_float</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">o</td><td>)</td>
+          <td>&#160;&#160;&#160;((o).d)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Define the object structure having reference counter. </p>
+<p >get float(double) value from mrbc_value. </p>
 
-<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00132">132</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00193">193</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="ade5de1eca0f940a3df5dec133bc40420" name="ade5de1eca0f940a3df5dec133bc40420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5de1eca0f940a3df5dec133bc40420">&#9670;&nbsp;</a></span>mrbc_integer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mrbc_integer</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">o</td><td>)</td>
+          <td>&#160;&#160;&#160;((o).i)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >get int value from mrbc_value. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00192">192</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="a36e72eb3baf967a1c5c917286691f5c0" name="a36e72eb3baf967a1c5c917286691f5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e72eb3baf967a1c5c917286691f5c0">&#9670;&nbsp;</a></span>mrbc_symbol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mrbc_symbol</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">o</td><td>)</td>
+          <td>&#160;&#160;&#160;((o).i)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >get symbol value (<a class="el" href="value_8h.html#aba5245b1081a2354c9e3f1d2b31fea14" title="mruby/c symbol ID">mrbc_sym</a>) from mrbc_value. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00194">194</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="aae11f2f5de54a0eaf65971994a06942f" name="aae11f2f5de54a0eaf65971994a06942f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae11f2f5de54a0eaf65971994a06942f">&#9670;&nbsp;</a></span>mrbc_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mrbc_type</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">o</td><td>)</td>
+          <td>&#160;&#160;&#160;((o).tt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >get the type (<a class="el" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90">mrbc_vtype</a>) from mrbc_value. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2_users_2hirohito_2work_2mrubyc_2src_2class_8c-example.html#a8">/Users/hirohito/work/mrubyc/src/class.c</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00191">191</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="a46183afd3c9c5f68ed3181294cc3e90b" name="a46183afd3c9c5f68ed3181294cc3e90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46183afd3c9c5f68ed3181294cc3e90b">&#9670;&nbsp;</a></span>SET_BOOL_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_BOOL_RETURN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                         \</div>
+<div class="line">    int tt = (n) ? <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a> : <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a>; \</div>
+<div class="line">    mrbc_decref(v);                              \</div>
+<div class="line">    v[0].tt = tt;                                \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a></div><div class="ttdeci">@ MRBC_TT_FALSE</div><div class="ttdoc">FalseClass.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00079">value.h:79</a></div></div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a></div><div class="ttdeci">@ MRBC_TT_TRUE</div><div class="ttdoc">TrueClass.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00082">value.h:82</a></div></div>
+</div><!-- fragment --><p >set a return value to true or false when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00276">276</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="ae8a162c63031c2111b2986340a4b20ab" name="ae8a162c63031c2111b2986340a4b20ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a162c63031c2111b2986340a4b20ab">&#9670;&nbsp;</a></span>SET_FALSE_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_FALSE_RETURN</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
+<div class="line">    mrbc_decref(v);             \</div>
+<div class="line">    v[0].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335">MRBC_TT_FALSE</a>;    \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment --><p >set a return value to false when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00268">268</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="af8c6fbf7c530079965e15e53416400d5" name="af8c6fbf7c530079965e15e53416400d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c6fbf7c530079965e15e53416400d5">&#9670;&nbsp;</a></span>SET_FLOAT_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_FLOAT_RETURN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {\</div>
+<div class="line">    mrbc_float nnn = (n);       \</div>
+<div class="line">    mrbc_decref(v);             \</div>
+<div class="line">    v[0].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a>;    \</div>
+<div class="line">    v[0].d = nnn;               \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138">MRBC_TT_FLOAT</a></div><div class="ttdeci">@ MRBC_TT_FLOAT</div><div class="ttdoc">Float.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00085">value.h:85</a></div></div>
+</div><!-- fragment --><p >set a float return value when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00287">287</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="a4bf0d67f18ec59e60d5f9cf3aa7e66d4" name="a4bf0d67f18ec59e60d5f9cf3aa7e66d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf0d67f18ec59e60d5f9cf3aa7e66d4">&#9670;&nbsp;</a></span>SET_INT_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_INT_RETURN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {        \</div>
+<div class="line">    mrbc_int nnn = (n);         \</div>
+<div class="line">    mrbc_decref(v);             \</div>
+<div class="line">    v[0].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a>;  \</div>
+<div class="line">    v[0].i = nnn;               \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3">MRBC_TT_INTEGER</a></div><div class="ttdeci">@ MRBC_TT_INTEGER</div><div class="ttdoc">Integer.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00083">value.h:83</a></div></div>
+</div><!-- fragment --><p >set an integer return value when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00281">281</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="a61b19154eced2cfb5303619073c40558" name="a61b19154eced2cfb5303619073c40558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b19154eced2cfb5303619073c40558">&#9670;&nbsp;</a></span>SET_NIL_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_NIL_RETURN</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {        \</div>
+<div class="line">    mrbc_decref(v);             \</div>
+<div class="line">    v[0].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a>;      \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="avalue_8h_html_ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57"><div class="ttname"><a href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57">MRBC_TT_NIL</a></div><div class="ttdeci">@ MRBC_TT_NIL</div><div class="ttdoc">NilClass.</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00078">value.h:78</a></div></div>
+</div><!-- fragment --><p >set a return value to nil when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00264">264</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9f2a139b3cdc06ee818426cb8805d76" name="ad9f2a139b3cdc06ee818426cb8805d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f2a139b3cdc06ee818426cb8805d76">&#9670;&nbsp;</a></span>SET_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_RETURN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {        \</div>
+<div class="line">    mrbc_value nnn = (n);       \</div>
+<div class="line">    mrbc_decref(v);             \</div>
+<div class="line">    v[0] = nnn;                 \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment --><p >set a return value when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00259">259</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+
+</div>
+</div>
+<a id="a92f25f7b148f8e907136ab79039f523a" name="a92f25f7b148f8e907136ab79039f523a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f25f7b148f8e907136ab79039f523a">&#9670;&nbsp;</a></span>SET_TRUE_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_TRUE_RETURN</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {        \</div>
+<div class="line">    mrbc_decref(v);             \</div>
+<div class="line">    v[0].tt = <a class="code hl_enumvalue" href="value_8h.html#ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f">MRBC_TT_TRUE</a>;     \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment --><p >set a return value to true when writing a method by C. </p>
+
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00272">272</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
 </div>
 </div>
@@ -177,9 +458,9 @@ This file is distributed under BSD 3-Clause License.
         </tr>
       </table>
 </div><div class="memdoc">
-<p >define the error code. (BETA TEST) </p>
+<p >error code for internal use. (BETA TEST) </p>
 
-<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00104">104</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00106">106</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
 </div>
 </div>
@@ -194,10 +475,39 @@ This file is distributed under BSD 3-Clause License.
         </tr>
       </table>
 </div><div class="memdoc">
-<p >define the value type.</p>
-<dl class="section note"><dt>Note</dt><dd>Must be same order as mrbc_class_tbl[], mrbc_delfunc[]. </dd></dl>
+<p >value type in mrbc_value. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57" name="ac23e434e418c857c87f2f18e8128aa90acfacb8938a9311bf0a5bb39839c4de57"></a>MRBC_TT_NIL&#160;</td><td class="fielddoc"><p >NilClass. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335" name="ac23e434e418c857c87f2f18e8128aa90a08d75762845a1e0380cf5ba1935a3335"></a>MRBC_TT_FALSE&#160;</td><td class="fielddoc"><p >FalseClass. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f" name="ac23e434e418c857c87f2f18e8128aa90ac654d77ea1fc110168bf276a6484121f"></a>MRBC_TT_TRUE&#160;</td><td class="fielddoc"><p >TrueClass. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3" name="ac23e434e418c857c87f2f18e8128aa90a4a0dc03aa991c4b759b1325a59dd13a3"></a>MRBC_TT_INTEGER&#160;</td><td class="fielddoc"><p >Integer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138" name="ac23e434e418c857c87f2f18e8128aa90a3e6a3716b3ec7c832cc2df203a9bd138"></a>MRBC_TT_FLOAT&#160;</td><td class="fielddoc"><p >Float. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90a2f626190d4d9ff26a42dbdc3b56fafd7" name="ac23e434e418c857c87f2f18e8128aa90a2f626190d4d9ff26a42dbdc3b56fafd7"></a>MRBC_TT_SYMBOL&#160;</td><td class="fielddoc"><p >Symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464" name="ac23e434e418c857c87f2f18e8128aa90ae8698f49d98ce9d418f70a3530570464"></a>MRBC_TT_CLASS&#160;</td><td class="fielddoc"><p >Class. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90ab8b630d16194aec7dcad638cef3c4e49" name="ac23e434e418c857c87f2f18e8128aa90ab8b630d16194aec7dcad638cef3c4e49"></a>MRBC_TT_OBJECT&#160;</td><td class="fielddoc"><p >General instance. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114" name="ac23e434e418c857c87f2f18e8128aa90aa86288657c47742ffe8fc208e2b39114"></a>MRBC_TT_PROC&#160;</td><td class="fielddoc"><p >Proc. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55" name="ac23e434e418c857c87f2f18e8128aa90abce540c8e708c2d394d5d5ecd37ddf55"></a>MRBC_TT_ARRAY&#160;</td><td class="fielddoc"><p >Array. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90a341b86ad12f9fd670e068c4add871143" name="ac23e434e418c857c87f2f18e8128aa90a341b86ad12f9fd670e068c4add871143"></a>MRBC_TT_STRING&#160;</td><td class="fielddoc"><p >String. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90ab0e79365e011a139918ca165c1762ef9" name="ac23e434e418c857c87f2f18e8128aa90ab0e79365e011a139918ca165c1762ef9"></a>MRBC_TT_RANGE&#160;</td><td class="fielddoc"><p >Range. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90ae32c295eb7239f7d8523ec5468cd46ea" name="ac23e434e418c857c87f2f18e8128aa90ae32c295eb7239f7d8523ec5468cd46ea"></a>MRBC_TT_HASH&#160;</td><td class="fielddoc"><p >Hash. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323" name="ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323"></a>MRBC_TT_EXCEPTION&#160;</td><td class="fielddoc"><p >Exception. </p>
+</td></tr>
+</table>
 
-<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00068">68</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="value_8h_source.html#l00066">66</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
 </div>
 </div>
