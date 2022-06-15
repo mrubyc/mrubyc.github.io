@@ -1,9 +1,0 @@
-<map id="src/vm.h" name="src/vm.h">
-<area shape="rect" id="node1" title="mruby bytecode executor." alt="" coords="95,5,169,32"/>
-<area shape="rect" id="node2" href="$vm__config_8h.html" title="Global configration of mruby/c VM&#39;s." alt="" coords="5,304,99,331"/>
-<area shape="rect" id="node3" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="165,229,229,256"/>
-<area shape="rect" id="node6" href="$class_8h.html" title="mruby/c Object, Proc, Nil, False and True class and class specific functions." alt="" coords="100,80,164,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="230,304,295,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="136,304,205,331"/>
-<area shape="rect" id="node7" href="$keyvalue_8h.html" title="mruby/c Key(Symbol) &#45; Value store." alt="" coords="89,155,175,181"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="src/c_object.h" name="src/c_object.h">
-<area shape="rect" id="node1" title="Object, Proc, Nil, True and False class." alt="" coords="78,5,182,32"/>
-<area shape="rect" id="node2" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="98,80,162,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="95,155,165,181"/>
-<area shape="rect" id="node5" href="$vm__config_8h.html" title="Global configration of mruby/c VM&#39;s." alt="" coords="189,155,282,181"/>
-</map>

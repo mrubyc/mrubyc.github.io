@@ -1,8 +1,0 @@
-<map id="src/c_object.h" name="src/c_object.h">
-<area shape="rect" id="node1" title="Object, Proc, Nil, True and False class." alt="" coords="241,5,345,32"/>
-<area shape="rect" id="node2" href="$c__object_8c.html" title="Object, Proc, Nil, True and False class." alt="" coords="5,80,109,107"/>
-<area shape="rect" id="node3" href="$mrubyc_8h.html" title="Include at once the necessary header files for user program." alt="" coords="133,80,232,107"/>
-<area shape="rect" id="node4" href="$rrt0_8c.html" title="Realtime multitask monitor for mruby/c." alt="" coords="256,80,331,107"/>
-<area shape="rect" id="node5" href="$symbol_8c.html" title="mruby/c Symbol class" alt="" coords="355,80,453,107"/>
-<area shape="rect" id="node6" href="$vm_8c.html" title="mruby bytecode executor." alt="" coords="477,80,550,107"/>
-</map>

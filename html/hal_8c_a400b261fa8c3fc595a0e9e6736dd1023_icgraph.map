@@ -1,6 +1,0 @@
-<map id="hal_disable_irq" name="hal_disable_irq">
-<area shape="rect" id="node1" title="disable interrupt" alt="" coords="192,56,300,83"/>
-<area shape="rect" id="node2" href="$rrt0_8h.html#a4cedec83506f121c8300d1311c2ed0b1" title=" " alt="" coords="8,5,141,32"/>
-<area shape="rect" id="node3" href="$rrt0_8h.html#a982c44ee49347faecf39930435a104b9" title=" " alt="" coords="17,56,132,83"/>
-<area shape="rect" id="node4" href="$rrt0_8h.html#abd5af69ab2eac1f2d96a061647d038a9" title=" " alt="" coords="5,107,144,133"/>
-</map>

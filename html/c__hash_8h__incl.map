@@ -1,9 +1,0 @@
-<map id="src/c_hash.h" name="src/c_hash.h">
-<area shape="rect" id="node1" title="mruby/c Hash class" alt="" coords="119,5,216,32"/>
-<area shape="rect" id="node2" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="98,155,162,181"/>
-<area shape="rect" id="node6" href="$c__array_8h.html" title="mruby/c Array class" alt="" coords="167,80,242,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,229,71,256"/>
-<area shape="rect" id="node4" title=" " alt="" coords="95,229,165,256"/>
-<area shape="rect" id="node5" href="$vm__config_8h.html" title="Global configration of mruby/c VM&#39;s." alt="" coords="189,229,282,256"/>
-<area shape="rect" id="node7" href="$alloc_8h.html" title="mrubyc memory management." alt="" coords="187,155,247,181"/>
-</map>

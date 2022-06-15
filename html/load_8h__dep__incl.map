@@ -1,8 +1,0 @@
-<map id="src/load.h" name="src/load.h">
-<area shape="rect" id="node1" title="mruby bytecode loader." alt="" coords="247,5,326,32"/>
-<area shape="rect" id="node2" href="$c__object_8c.html" title="Object, Proc, Nil, True and False class." alt="" coords="5,80,109,107"/>
-<area shape="rect" id="node3" href="$load_8c.html" title="mruby bytecode loader." alt="" coords="134,80,213,107"/>
-<area shape="rect" id="node4" href="$mrubyc_8h.html" title="Include at once the necessary header files for user program." alt="" coords="237,80,336,107"/>
-<area shape="rect" id="node5" href="$rrt0_8c.html" title="Realtime multitask monitor for mruby/c." alt="" coords="360,80,435,107"/>
-<area shape="rect" id="node6" href="$vm_8c.html" title="mruby bytecode executor." alt="" coords="459,80,533,107"/>
-</map>

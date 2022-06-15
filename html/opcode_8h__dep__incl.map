@@ -1,8 +1,0 @@
-<map id="src/opcode.h" name="src/opcode.h">
-<area shape="rect" id="node1" title="Define operation codes and associated macros." alt="" coords="267,5,365,32"/>
-<area shape="rect" id="node2" href="$c__array_8c.html" title="mruby/c Array class" alt="" coords="5,80,101,107"/>
-<area shape="rect" id="node3" href="$c__numeric_8c.html" title="mruby/c Fixnum and Float class" alt="" coords="125,80,240,107"/>
-<area shape="rect" id="node4" href="$c__object_8c.html" title="Object, Proc, Nil, True and False class." alt="" coords="264,80,368,107"/>
-<area shape="rect" id="node5" href="$c__range_8c.html" title="mruby/c Range object" alt="" coords="392,80,493,107"/>
-<area shape="rect" id="node6" href="$vm_8c.html" title="mruby bytecode executor." alt="" coords="518,80,591,107"/>
-</map>
