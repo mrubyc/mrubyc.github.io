@@ -1,8 +1,9 @@
 <map id="c_numeric.c" name="c_numeric.c">
-<area shape="rect" id="node1" title="mruby/c Integer and Float class" alt="" coords="104,5,197,32"/>
-<area shape="rect" id="node2" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="71,155,135,181"/>
-<area shape="rect" id="node3" href="$class_8h.html" title="Class related functions." alt="" coords="23,80,87,107"/>
-<area shape="rect" id="node4" href="$c__string_8h.html" title="mruby/c String class" alt="" coords="111,80,190,107"/>
-<area shape="rect" id="node5" href="$console_8h.html" title="console output module. (not yet input)" alt="" coords="214,80,293,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="317,80,486,107"/>
+<area shape="rect" id="node1" title="mruby/c Integer and Float class" alt="" coords="106,5,200,32"/>
+<area shape="rect" id="node2" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="85,229,149,256"/>
+<area shape="rect" id="node3" href="$error_8h.html" title="exception classes" alt="" coords="21,155,80,181"/>
+<area shape="rect" id="node4" href="$class_8h.html" title="Class related functions." alt="" coords="86,80,150,107"/>
+<area shape="rect" id="node5" href="$c__string_8h.html" title="mruby/c String class" alt="" coords="155,155,234,181"/>
+<area shape="rect" id="node6" href="$console_8h.html" title="console output module. (not yet input)" alt="" coords="258,155,336,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="276,80,446,107"/>
 </map>

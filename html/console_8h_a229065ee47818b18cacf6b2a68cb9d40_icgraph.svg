@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="console_8c.html#ad0f9dfb0fb03af24c0117d595f6b63cb" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="console_8c.html#ac8e80d5558d8d52cfb7095e261d49e29" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 81,-19.5 81,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="40.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">mrbc_printf_bit</text>
 </a>

@@ -31,7 +31,7 @@ var value_8h =
       [ "MRBC_TT_HASH", "value_8h.html#ac23e434e418c857c87f2f18e8128aa90ae32c295eb7239f7d8523ec5468cd46ea", null ],
       [ "MRBC_TT_EXCEPTION", "value_8h.html#ac23e434e418c857c87f2f18e8128aa90a76c12073ebe195074b4c63a08f622323", null ]
     ] ],
-    [ "mrbc_atoi", "value_8h.html#a2178213349c016812d83226727b36dfc", null ],
+    [ "mrbc_atoi", "value_8h.html#ac9d42d2ee7a37436003d9e99824057dd", null ],
     [ "mrbc_compare", "value_8h.html#a83fe06da224d5b63e113b7df8168a54d", null ],
     [ "mrbc_delfunc", "value_8h.html#a181c7686900a29b6cdcb9fd213c90f37", null ]
 ];
