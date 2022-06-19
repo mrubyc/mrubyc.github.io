@@ -156,8 +156,8 @@
 <!-- Node13 -->
 <g id="node11" class="node">
 <title>Node13</title>
-<g id="a_node11"><a xlink:href="c__math_8h.html" target="_top" xlink:title="mruby/c Math class">
-<polygon fill="white" stroke="black" points="845.5,-224.5 845.5,-243.5 902.5,-243.5 902.5,-224.5 845.5,-224.5"/>
+<g id="a_node11"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="845.5,-224.5 845.5,-243.5 902.5,-243.5 902.5,-224.5 845.5,-224.5"/>
 <text text-anchor="middle" x="874" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">c_math.h</text>
 </a>
 </g>
@@ -201,8 +201,8 @@
 <!-- Node17 -->
 <g id="node14" class="node">
 <title>Node17</title>
-<g id="a_node14"><a xlink:href="c__object_8h.html" target="_top" xlink:title="Object, Proc, Nil, True and False class.">
-<polygon fill="white" stroke="black" points="921,-224.5 921,-243.5 983,-243.5 983,-224.5 921,-224.5"/>
+<g id="a_node14"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="921,-224.5 921,-243.5 983,-243.5 983,-224.5 921,-224.5"/>
 <text text-anchor="middle" x="952" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">c_object.h</text>
 </a>
 </g>
@@ -216,8 +216,8 @@
 <!-- Node18 -->
 <g id="node15" class="node">
 <title>Node18</title>
-<g id="a_node15"><a xlink:href="c__numeric_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1001,-224.5 1001,-243.5 1071,-243.5 1071,-224.5 1001,-224.5"/>
+<g id="a_node15"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="1001,-224.5 1001,-243.5 1071,-243.5 1071,-224.5 1001,-224.5"/>
 <text text-anchor="middle" x="1036" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">c_numeric.h</text>
 </a>
 </g>
