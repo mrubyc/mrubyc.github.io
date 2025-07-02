@@ -1,0 +1,5 @@
+<map id="console.c" name="console.c">
+<area shape="rect" id="Node000001" title="console output module. (not yet input)" alt="" coords="5,5,83,31"/>
+<area shape="rect" id="Node000002" href="$mrubyc_8h.html" title="Include at once the necessary header files." alt="" coords="6,79,82,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,31,47,63,41,63,41,31"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="symbol.c" name="symbol.c">
+<area shape="rect" id="Node000001" title="mruby/c Symbol class" alt="" coords="205,5,280,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,181,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,34,133,74,131,70,216,29"/>
+<area shape="rect" id="Node000003" href="$mrubyc_8h.html" title="Include at once the necessary header files." alt="" coords="205,79,280,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,31,245,63,240,63,240,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="304,79,476,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="269,29,352,69,350,74,266,34"/>
+</map>

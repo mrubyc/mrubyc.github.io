@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$struct_r_class.html" title="Class object." alt="" coords="5,5,71,31"/>
+<area shape="rect" id="Node000001" href="$struct_r_builtin_class.html" title="Built&#45;in class object." alt="" coords="119,5,220,31"/>
+<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="86,16,118,16,118,21,86,21"/>
+<area shape="rect" id="Node000002" href="$struct_r_builtin_no_method_class.html" title="Built&#45;in No method class object." alt="" coords="268,5,429,31"/>
+<area shape="poly" id="edge9_Node000001_Node000002" title=" " alt="" coords="236,16,268,16,268,21,236,21"/>
+</map>

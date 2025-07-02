@@ -1,0 +1,9 @@
+<map id="alloc.h" name="alloc.h">
+<area shape="rect" id="Node000001" title="mruby/c memory management." alt="" coords="51,5,110,31"/>
+<area shape="rect" id="Node000002" href="$alloc_8c.html" title="mruby/c memory management." alt="" coords="5,79,65,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,45,45,80,40,77,63,42"/>
+<area shape="rect" id="Node000003" href="$c__array_8h.html" title="mruby/c Array class" alt="" coords="89,79,162,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,42,120,77,116,80,94,45"/>
+<area shape="rect" id="Node000004" href="$c__hash_8h.html" title="mruby/c Hash class" alt="" coords="88,153,163,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="128,120,128,152,123,152,123,120"/>
+</map>
