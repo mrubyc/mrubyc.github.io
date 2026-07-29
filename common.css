@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+  ヘッダ
+*/
+.header {
+  font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "CTRS" 0;
+}
+
+.header-inner {
+  height: 110px;
+  color: #fff;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+.header .logo {
+  height: 40px;
+  margin: 0 30px 0 30px;
+}
+.header .header-message {
+  width: 100%;
+}
+
+/*
+  メインコンテンツ
+*/
+.main {
+  min-height: calc(100vh - 110px - 65px);
+  line-height: 1.8em;
+}
+/* タイトル */
+.main .title {
+  text-align: center;
+}
+
+/* コンテンツ */
+.main .contents {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  column-gap: 30px;
+
+  width: 1080px;
+  max-width: 90%;
+  margin: 20px auto 0 auto;
+}
+.main .contents .item {
+  flex-grow: 1;
+}
+.main .contents .item h2 {
+  margin: 40px 0 15px 0;
+  border-bottom: 1px solid #888;
+  padding: 10px 0 10px 10px;
+  font-size: 28px;
+  background-color: #ddd;
+}
+.main .contents .item h2:first-child {
+  margin-top: 0;
+}
+.main .contents .item h3 {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #888;
+  font-size: 20px;
+}
+.main .contents .item ul {
+  padding-left: 2em;
+}
+
+
+/* サイドメニュー */
+.main .contents .menu {
+  flex-shrink: 0;
+  position: relative;
+}
+.main .contents .menu-inner {
+  width: 250px;
+  position: sticky;
+  top: 30px;
+  left: 0;
+  right: 0;
+  border: 1px solid #ddd;
+  padding: 1px;
+}
+.main .contents .menu-inner h2 {
+  padding: 15px 0 15px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #ddd;
+}
+.main .contents .menu-inner h2::before {
+  content: "■ ";
+  color: #aaa;
+}
+
+.main .contents .menu-inner ul {
+  list-style-type: none;
+}
+.main .contents .menu-inner li {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #ccc;
+}
+.main .contents .menu-inner li:last-child {
+  border-bottom: none;
+}
+.main .contents .menu-inner li::before {
+  content: "≫";
+  display: inline-flex;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.main .contents .menu-inner a {
+  display: inline-flex;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  color: inherit;
+  text-decoration: none;
+}
+.main .contents .menu-inner a:hover {
+  color: #555;
+}
+
+
+/*
+  フッタ
+*/
+.footer {
+  height: 50px;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+
+  font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "CTRS" 0;
+}
+
+/*
+  モバイルメディア用指定
+*/
+@media (max-width: 800px) {
+  .header .logo {
+    height: 20px;
+    margin: 0 10px 0 10px;
+  }
+
+  .main .contents .menu {
+    display: none;
+  }
+}
