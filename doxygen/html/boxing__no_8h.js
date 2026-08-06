@@ -1,0 +1,27 @@
+var boxing__no_8h =
+[
+    [ "RObject", "struct_r_object.html", "struct_r_object" ],
+    [ "mrbc_bool_value", "boxing__no_8h.html#a8af40eb33da78cdc5eca85cd7dfd09f6", null ],
+    [ "mrbc_false_value", "boxing__no_8h.html#aa934b3a868b49c9484c7c6d5026defa1", null ],
+    [ "mrbc_float", "boxing__no_8h.html#ad2f37afe1c4f1c556330803f46d19064", null ],
+    [ "mrbc_float_value", "boxing__no_8h.html#abae5fe284aad0eb4d7384c747b8edfec", null ],
+    [ "mrbc_immediate_value", "boxing__no_8h.html#a17b3cf1b0adc2e734d7eaf30866b47a1", null ],
+    [ "mrbc_immediate_value1", "boxing__no_8h.html#aee9ac2ac06fb44e912308356589b3401", null ],
+    [ "mrbc_immediate_value2", "boxing__no_8h.html#a1077ab86cfc7cb0093fdcf2be89d8e37", null ],
+    [ "mrbc_integer", "boxing__no_8h.html#ade5de1eca0f940a3df5dec133bc40420", null ],
+    [ "mrbc_integer_value", "boxing__no_8h.html#af4bdb2224a0f7f7ac4f22bbad1747c38", null ],
+    [ "mrbc_nil_value", "boxing__no_8h.html#a4dae657ff33c16b21f32e2f77eb1b71d", null ],
+    [ "mrbc_symbol", "boxing__no_8h.html#a36e72eb3baf967a1c5c917286691f5c0", null ],
+    [ "mrbc_symbol_value", "boxing__no_8h.html#a63e7ccbb6fdb8ebc28c4af3540f5fcd3", null ],
+    [ "mrbc_true_value", "boxing__no_8h.html#a0d6e6fc171ea3045f079cfe1ebdf46ae", null ],
+    [ "mrbc_type", "boxing__no_8h.html#aae11f2f5de54a0eaf65971994a06942f", null ],
+    [ "mrbc_value", "boxing__no_8h.html#ac7690d26cafd71fb4aacbf1cc3ba9696", null ],
+    [ "mrbc_set_bool", "boxing__no_8h.html#a82ed814c1ea094689c6bf2b85a824962", null ],
+    [ "mrbc_set_false", "boxing__no_8h.html#ae6065da398607010216f6b48a3b26ca8", null ],
+    [ "mrbc_set_float", "boxing__no_8h.html#a95360a7f70914d5e6bfaf6919db78e47", null ],
+    [ "mrbc_set_integer", "boxing__no_8h.html#afdfa37ed7c442171b30a2e353455f448", null ],
+    [ "mrbc_set_nil", "boxing__no_8h.html#a01cbf302aec87b5f1ed5fde9dd1c1f95", null ],
+    [ "mrbc_set_symbol", "boxing__no_8h.html#a06ef84d7d309073528329c9b98f07f76", null ],
+    [ "mrbc_set_true", "boxing__no_8h.html#ac92b1996d70d7d2d331ee87b80ac9ce0", null ],
+    [ "mrbc_set_tt", "boxing__no_8h.html#a6c12366cf50b8c85c08cf62acc56aeed", null ]
+];

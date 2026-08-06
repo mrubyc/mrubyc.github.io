@@ -1,0 +1,7 @@
+<map id="RClass" name="RClass">
+<area shape="rect" id="Node000001" title="Class object." alt="" coords="5,5,379,275"/>
+<area shape="rect" id="Node000002" href="$struct_r_builtin_class.html" title="Built&#45;in class object." alt="" coords="5,323,379,613"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,287,195,324,190,323,192,292"/>
+<area shape="rect" id="Node000003" href="$struct_r_builtin_no_method_class.html" title="Built&#45;in No method class object." alt="" coords="117,661,268,849"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,625,195,662,190,660,191,630"/>
+</map>

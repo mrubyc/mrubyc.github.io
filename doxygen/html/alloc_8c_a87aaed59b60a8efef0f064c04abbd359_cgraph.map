@@ -1,0 +1,9 @@
+<map id="remove_free_block" name="remove_free_block">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,137,56"/>
+<area shape="rect" id="Node000002" href="$alloc_8c.html#a10f255e05f2f49686909348175f3a5ef" title=" " alt="" coords="185,31,268,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,41,172,43,166,44,137,46"/>
+<area shape="rect" id="Node000003" href="$alloc_8c.html#ab77fd7c768950db893e8736d4a27b771" title=" " alt="" coords="316,5,368,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="268,32,298,28,303,27,269,37"/>
+<area shape="rect" id="Node000004" href="$c__numeric_8c.html#a750ec222833802c9789cee1f456cfb21" title=" " alt="" coords="319,55,365,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="269,50,306,60,301,60,268,55"/>
+</map>

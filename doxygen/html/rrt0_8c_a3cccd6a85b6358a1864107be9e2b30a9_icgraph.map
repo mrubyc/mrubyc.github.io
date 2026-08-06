@@ -1,0 +1,9 @@
+<map id="mrbc_task_q_waiting_head" name="mrbc_task_q_waiting_head">
+<area shape="rect" id="Node000001" title=" " alt="" coords="425,31,604,56"/>
+<area shape="rect" id="Node000002" href="$c__task__queue_8c.html#a41bdd8e5dc2bf70ebfc8355a6fd8d1de" title=" " alt="" coords="213,5,376,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,31,377,30,377,25,412,31"/>
+<area shape="rect" id="Node000003" href="$c__task__queue_8c.html#a6441829aa298889acccbd519afb7f65d" title=" " alt="" coords="213,55,377,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="412,55,378,61,377,56,407,55"/>
+<area shape="rect" id="Node000004" href="$c__task__queue_8c.html#aad076e73f44ade322d8b69793bebb722" title=" " alt="" coords="5,55,165,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="194,68,165,70,165,65,200,67"/>
+</map>

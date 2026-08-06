@@ -1,0 +1,9 @@
+<map id="symbol.h" name="symbol.h">
+<area shape="rect" id="Node000001" title="mruby/c Symbol class" alt="" coords="86,5,160,31"/>
+<area shape="rect" id="Node000002" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="19,79,83,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,33,76,70,72,66,113,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="107,79,283,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,29,175,67,169,68,134,34"/>
+<area shape="rect" id="Node000003" href="$boxing__no_8h.html" title="mruby/c mrbc_value definition." alt="" coords="5,153,97,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="53,103,54,137,48,136,49,107"/>
+</map>

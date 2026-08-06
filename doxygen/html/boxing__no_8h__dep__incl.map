@@ -1,0 +1,46 @@
+<map id="boxing_no.h" name="boxing_no.h">
+<area shape="rect" id="Node000001" title="mruby/c mrbc_value definition." alt="" coords="374,5,466,31"/>
+<area shape="rect" id="Node000002" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="388,79,452,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="421,44,422,80,418,77,419,49"/>
+<area shape="rect" id="Node000003" href="$c__array_8h.html" title="mruby/c Array class" alt="" coords="21,300,94,326"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,98,306,106,229,117,160,133,133,143,115,155,100,171,88,189,72,231,63,270,60,300,55,299,58,269,67,229,83,187,96,167,112,151,131,139,158,128,228,112,305,101,375,95"/>
+<area shape="rect" id="Node000004" href="$c__hash_8h.html" title="mruby/c Hash class" alt="" coords="20,374,94,399"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="371,98,217,117,140,134,110,144,88,155,54,186,34,217,22,253,11,301,8,313,10,325,26,351,45,372,40,374,21,354,5,327,3,313,5,299,17,252,29,215,50,182,85,150,108,139,138,128,216,112,375,95"/>
+<area shape="rect" id="Node000005" href="$c__proc_8h.html" title="mruby/c Proc class" alt="" coords="136,153,208,178"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="372,108,209,156,207,151,375,105"/>
+<area shape="rect" id="Node000006" href="$vm_8h.html" title="mruby bytecode executor." alt="" coords="169,226,220,252"/>
+<area shape="poly" id="edge27_Node000002_Node000006" title=" " alt="" coords="371,97,307,104,232,114,166,131,142,142,126,154,121,163,121,172,132,191,151,209,175,225,169,226,148,213,127,194,116,173,116,162,122,151,139,137,164,126,231,109,306,99,375,94"/>
+<area shape="rect" id="Node000007" href="$c__range_8h.html" title="mruby/c Range class" alt="" coords="245,300,323,326"/>
+<area shape="poly" id="edge13_Node000002_Node000007" title=" " alt="" coords="407,117,293,301,289,298,402,118"/>
+<area shape="rect" id="Node000008" href="$c__string_8h.html" title="mruby/c String class" alt="" coords="347,300,426,326"/>
+<area shape="poly" id="edge14_Node000002_Node000008" title=" " alt="" coords="418,119,391,301,386,299,414,122"/>
+<area shape="rect" id="Node000009" href="$load_8h.html" title="mruby bytecode loader." alt="" coords="450,300,507,326"/>
+<area shape="poly" id="edge24_Node000002_Node000009" title=" " alt="" coords="429,117,478,300,473,299,425,121"/>
+<area shape="rect" id="Node000011" href="$c__task__queue_8h_source.html" title=" " alt="" coords="483,153,597,178"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="454,110,522,152,517,152,453,116"/>
+<area shape="rect" id="Node000012" href="$class_8h.html" title="Class related functions." alt="" coords="696,226,760,252"/>
+<area shape="poly" id="edge16_Node000002_Node000012" title=" " alt="" coords="467,94,558,111,608,127,655,150,677,167,696,188,723,227,718,225,692,191,673,171,652,155,606,132,556,116,467,100"/>
+<area shape="rect" id="Node000013" href="$global_8h.html" title="Constant and global variables." alt="" coords="648,300,714,326"/>
+<area shape="poly" id="edge21_Node000002_Node000013" title=" " alt="" coords="467,95,502,101,540,111,577,128,611,151,641,187,662,229,675,269,682,301,677,298,670,271,657,231,637,190,607,155,575,132,538,116,501,106,467,100"/>
+<area shape="rect" id="Node000014" href="$console_8h.html" title="console output module. (not yet input)" alt="" coords="913,153,991,178"/>
+<area shape="poly" id="edge18_Node000002_Node000014" title=" " alt="" coords="467,95,658,115,902,150,915,155,910,155,901,155,657,120,467,100"/>
+<area shape="rect" id="Node000015" href="$error_8h.html" title="exception classes" alt="" coords="723,153,781,178"/>
+<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="467,100,705,150,726,157,720,157,703,155,467,105"/>
+<area shape="rect" id="Node000016" href="$keyvalue_8h.html" title="mruby/c Key(Symbol) &#45; Value store." alt="" coords="804,153,889,178"/>
+<area shape="poly" id="edge22_Node000002_Node000016" title=" " alt="" coords="467,97,613,119,794,150,807,155,802,155,793,155,612,124,467,102"/>
+<area shape="rect" id="Node000017" href="$symbol_8h.html" title="mruby/c Symbol class" alt="" coords="232,153,306,178"/>
+<area shape="poly" id="edge25_Node000002_Node000017" title=" " alt="" coords="379,113,296,154,294,150,383,110"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="59,339,60,374,55,372,55,343"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="181,191,193,226,188,225,179,196"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="156,262,82,302,79,297,159,257"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="175,265,71,375,67,371,171,262"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="222,259,272,299,266,300,221,264"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="235,252,356,299,351,300,234,258"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="235,247,438,297,453,303,448,303,437,303,234,253"/>
+<area shape="rect" id="Node000010" href="$rrt0_8h.html" title="Realtime multitask monitor for mruby/c." alt="" coords="169,300,220,326"/>
+<area shape="poly" id="edge12_Node000006_Node000010" title=" " alt="" coords="196,265,197,301,192,298,193,270"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="714,263,691,302,688,297,710,266"/>
+<area shape="poly" id="edge20_Node000015_Node000012" title=" " alt="" coords="745,191,734,228,730,224,741,195"/>
+<area shape="poly" id="edge23_Node000016_Node000012" title=" " alt="" coords="816,186,749,228,747,223,811,188"/>
+<area shape="poly" id="edge26_Node000017_Node000006" title=" " alt="" coords="248,187,209,228,205,224,244,191"/>
+</map>

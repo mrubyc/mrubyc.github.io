@@ -1,0 +1,13 @@
+<map id="mrbc_wakeup_task" name="mrbc_wakeup_task">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,140,80"/>
+<area shape="rect" id="Node000002" href="$rrt0_8c.html#a4cedec83506f121c8300d1311c2ed0b1" title=" " alt="" coords="188,55,320,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,65,175,67,170,68,140,70"/>
+<area shape="rect" id="Node000004" href="$rrt0_8c.html#a6de81097ea94076096d4630b026beed1" title=" " alt="" coords="392,5,494,31"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="127,52,187,40,286,27,378,21,373,23,287,32,188,45,128,57"/>
+<area shape="rect" id="Node000005" href="$rrt0_8c.html#a7a07748229f1c045dbfee94b40c1e04c" title=" " alt="" coords="393,104,492,130"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="128,78,188,90,288,103,380,113,375,113,287,108,187,95,127,84"/>
+<area shape="rect" id="Node000003" href="$rrt0_8c.html#acfc3a9a953a82a7981e087448b5902c7" title=" " alt="" coords="368,55,517,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="320,65,355,67,350,68,320,70"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="305,51,374,36,379,35,307,57"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="306,78,381,100,376,100,306,84"/>
+</map>

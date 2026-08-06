@@ -1,0 +1,5 @@
+<map id="opcode.h" name="opcode.h">
+<area shape="rect" id="Node000001" title="Define operation codes and associated macros." alt="" coords="5,5,80,31"/>
+<area shape="rect" id="Node000002" href="$vm_8c.html" title="mruby bytecode executor." alt="" coords="17,79,68,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,45,45,79,40,78,40,48"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="load.h" name="load.h">
+<area shape="rect" id="Node000001" title="mruby bytecode loader." alt="" coords="5,5,62,31"/>
+<area shape="rect" id="Node000002" href="$value_8h.html" title="mruby/c value definitions" alt="" coords="35,226,98,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,30,65,211,60,211,33,33"/>
+<area shape="rect" id="Node000004" href="$vm_8h.html" title="mruby bytecode executor." alt="" coords="71,79,121,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="43,29,78,66,73,68,44,34"/>
+<area shape="rect" id="Node000003" href="$boxing__no_8h.html" title="mruby/c mrbc_value definition." alt="" coords="21,300,112,326"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,250,69,285,64,283,65,254"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="93,102,81,153,72,212,67,211,76,152,91,107"/>
+<area shape="rect" id="Node000005" href="$symbol_8h.html" title="mruby/c Symbol class" alt="" coords="187,153,261,178"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="118,103,192,144,187,146,118,108"/>
+<area shape="rect" id="Node000007" href="$c__proc_8h.html" title="mruby/c Proc class" alt="" coords="91,153,162,178"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="102,102,118,138,113,139,101,108"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="196,181,109,222,106,217,199,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="136,226,312,252"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="226,176,227,212,222,209,223,181"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="115,181,89,216,85,213,119,176"/>
+</map>

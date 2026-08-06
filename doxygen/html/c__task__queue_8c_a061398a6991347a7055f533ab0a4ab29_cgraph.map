@@ -1,0 +1,13 @@
+<map id="queue_is_closed" name="queue_is_closed">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,124,56"/>
+<area shape="rect" id="Node000002" href="$value_8h.html#a264e272a50b44a8873fa9928be7cda0c" title=" " alt="" coords="196,5,289,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,32,183,26,178,28,125,38"/>
+<area shape="rect" id="Node000003" href="$class_8c.html#a7bb821f6e7ad90b013516761194ec44c" title=" " alt="" coords="172,55,313,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,49,159,55,154,57,124,54"/>
+<area shape="rect" id="Node000004" href="$value_8h.html#a82f06d6fe162ccb4ac65783e3e9e8d3a" title=" " alt="" coords="364,29,454,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="313,54,352,51,347,52,314,59"/>
+<area shape="rect" id="Node000005" href="$keyvalue_8c.html#ae1ca64c77e80539715506e17fd081c01" title=" " alt="" coords="361,79,457,104"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="313,75,348,82,343,82,313,80"/>
+<area shape="rect" id="Node000006" href="$keyvalue_8c.html#a82f625f231c944d8f17621ea1ee9c312" title=" " alt="" coords="505,79,608,104"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="458,89,492,91,487,92,458,94"/>
+</map>

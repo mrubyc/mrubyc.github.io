@@ -1,9 +1,0 @@
-<map id="error.h" name="error.h">
-<area shape="rect" id="Node000001" title="exception classes" alt="" coords="8,5,66,31"/>
-<area shape="rect" id="Node000002" href="$class_8h.html" title="Class related functions." alt="" coords="5,79,69,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="40,46,40,79,34,79,34,46"/>
-<area shape="rect" id="Node000003" href="$vm_8h.html" title="mruby bytecode executor." alt="" coords="12,153,62,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="40,120,40,152,34,152,34,120"/>
-<area shape="rect" id="Node000004" href="$rrt0_8h.html" title="Realtime multitask monitor for mruby/c." alt="" coords="11,226,63,252"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="40,194,40,226,34,226,34,194"/>
-</map>
