@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* コンテンツ */
+.main .contents {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  column-gap: 30px;
+
+  width: 1080px;
+  max-width: 90%;
+  margin: 20px auto 0 auto;
+}
+.main .contents .item {
+  flex-grow: 1;
+}
+.main .contents .item h2 {
+  margin: 40px 0 15px 0;
+  border-bottom: 1px solid #888;
+  padding: 10px 0 10px 10px;
+  font-size: 28px;
+  background-color: #ddd;
+}
+.main .contents .item h2:first-child {
+  margin-top: 0;
+}
+.main .contents .item h3 {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #888;
+  font-size: 20px;
+}
+.main .contents .item ul {
+  padding-left: 2em;
+}
+
+.main .contents .item .img-scr-capt {
+  display: block;
+  margin: 0 0 1.5em 1.5em;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+.main .contents .item .img-inline {
+  display: inline;
+  height: 1em;
+}
+
+
+/* サイドメニュー */
+.main .contents .menu {
+  flex-shrink: 0;
+  position: relative;
+}
+.main .contents .menu-inner {
+  width: 250px;
+  position: sticky;
+  top: 30px;
+  left: 0;
+  right: 0;
+  border: 1px solid #ddd;
+  padding: 1px;
+}
+.main .contents .menu-inner h2 {
+  padding: 15px 0 15px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+/* サイドメニュー：ul 1段目 */
+.main .contents .menu-inner > ul {
+  list-style: none;
+}
+.main .contents .menu-inner > ul > li {
+  position:relative;
+  padding: 0 0 0 1.7em;
+  border-bottom: 1px solid #ccc;
+}
+.main .contents .menu-inner > ul > li::before {
+  content: "≫ ";
+  position: absolute;
+  left: 10px;
+  top: 14px;
+}
+.main .contents .menu-inner > ul li:last-child {
+  border-bottom: none;
+}
+
+.main .contents .menu-inner a {
+  display: inline-flex;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  color: inherit;
+  text-decoration: none;
+}
+.main .contents .menu-inner a:hover {
+  color: #555;
+}
+
+/* サイドメニュー：ul 2段目 */
+.main .contents .menu-inner > ul > li > ul {
+  list-style-type: "・";
+}
+.main .contents .menu-inner > ul > li > ul > li {
+  margin: -15px 0 0 10px;
+}
+.main .contents .menu-inner > ul > li > ul > li > a {
+  padding: 0 0 15px 0;
+}
+
+
+/*
+  モバイルメディア用指定
+*/
+@media (max-width: 800px) {
+  .main .contents .menu {
+    display: none;
+  }
+}

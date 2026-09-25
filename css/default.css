@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* コンテンツ */
+.main .contents {
+  width: 1080px;
+  max-width: 90%;
+  margin: 20px auto 0 auto;
+}
+.main .contents h2 {
+  margin: 40px 0 15px 0;
+  border-bottom: 1px solid #888;
+  padding: 10px 0 10px 10px;
+  font-size: 28px;
+  background-color: #ddd;
+}
+.main .contents h2:first-child {
+  margin-top: 0;
+}
+.main .contents h3 {
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #888;
+  font-size: 20px;
+}
+.main .contents ul {
+  padding-left: 2em;
+}

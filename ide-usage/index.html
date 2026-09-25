@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>mruby/c | Home</title>
+  <meta name="description" content="mruby/c IDE の使い方">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/common.css">
+  
+  <link rel="stylesheet" href="/css/two-column.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img class="logo" src="/img/mrubyc_logo.png" alt="mruby/c">
+    </a>
+    <p class="header-message">another implementation of the mruby virtual machine.</p>
+  </div>
+</header>
+
+
+<main class="main">
+<div class="contents">
+
+<!-- each contents -->
+<div class="item">
+
+  <h1 id="mrubyc-ide-">mruby/c IDE の使い方</h1>
+
+  <p>このページでは、mruby/c IDE の使い方について、ダウンロードから実際のマイコンボードで実行するまでの手順を、以下のターゲットを例にして説明します。</p>
+
+  <ul>
+    <li>PC: Windows11</li>
+    <li>マイコンボード: RBoard</li>
+  </ul>
+
+  <h2 id="section">ダウンロードとファイル展開</h2>
+
+  <p><a href="https://mrubyc.github.io/downloads/">https://mrubyc.github.io/downloads/</a> から、ビルド済み実行ファイルがダウンロードできます。</p>
+
+  <p>この記事では、「mruby/c IDE 1.3.0 for Windows」の箇所から、zip 形式のファイルをダウンロードしています。</p>
+
+  <p>ダウンロードしたファイル上で右クリックして、「すべて展開」を選びます。
+<img src="img/20260915163004.png" alt="すべて展開" class="img-scr-capt" /></p>
+
+  <p>展開のダイアログが表示されますので、「ファイルを下のフォルダーに展開する」欄に、任意のパスを入力します。この記事では、わかりやすさのため Cドライブのルートに展開します。
+<img src="img/20260915163550.png" alt="展開ダイアログ" class="img-scr-capt" /></p>
+
+  <p>展開されたフォルダを開き、「mrubyc_ide.exe」をダブルクリックして実行します。
+<img src="img/20260915163848.png" alt="実行" class="img-scr-capt" /></p>
+
+  <p>Windowsの設定により、「Windowsによって PCが保護されました」と表示される場合があります。詳細情報のリンクから「実行」ボタンをクリックし実行してください。
+無事以下のようにIDEのウインドウが表示されます。
+<img src="img/20260915164124.png" alt="IDEウインドウ" class="img-scr-capt" /></p>
+
+  <p>Macの場合も同様に、「開発元を検証できないため開けません」と表示される場合があります。
+その場合は、</p>
+
+  <ul>
+    <li>システム設定を開き「プライバシーとセキュリティー」を選びます。</li>
+    <li>右ペインのセキュリティー欄が [●] App Store と確認済みの開発元からのアプリケーションを許可　になっていることを確認します。</li>
+    <li>その下に「mrubyc_ide”は開発元を確認できないため、使用がブロックされました」と表示されていますので、「このまま開く」ボタンをクリックして許可します。</li>
+    <li>同様の手順で、mrbc_*、mrbwrite も一度実行し、システム設定から許可をしておきます。</li>
+  </ul>
+
+  <h2 id="section-1">画面の説明</h2>
+
+  <p>IDEの画面は、大きく分けて3つのエリア（ペイン）があります。</p>
+
+  <ol>
+    <li>左側は、プロジェクト名やプログラム名を表示します。</li>
+    <li>右上は、プログラム編集エリアです。</li>
+    <li>右下は、コンソール画面です。マイコンボードへのプログラム書き込み状況や、マイコンからの画面出力を表示します。</li>
+  </ol>
+
+  <p><img src="img/20260915164125.png" alt="IDEウインドウ説明" /></p>
+
+  <h2 id="section-2">初期設定</h2>
+
+  <p>マイコンボードは、UART (USB-UART) 等でシリアル接続されることを想定しています。実際にボードを接続し、COM番号が何番になっているかをデバイスマネージャなどで確認します。</p>
+
+  <p><img src="img/20260915164230.png" alt="デバイスマネージャ" class="img-scr-capt" /></p>
+
+  <p>メニューから <code>File</code> &gt; <code>Settings..</code> を選び、Setting ダイアログを開きます。</p>
+
+  <p>ダウンロードしたファイル中に mrbc_***.exe ファイルがありますので、ダイアログの「mrbc」欄にそれを指定します。</p>
+
+  <ul>
+    <li>パス名を直接入力するか、右端の <code>[...]</code> ボタンで表示されるファイル選択ダイアログを使用します。</li>
+    <li>mrbc_の後の数字は、mruby/c のバージョンです。使用するマイコンボードの仕様に合わせてください。</li>
+  </ul>
+
+  <p><img src="img/20260915164231.png" alt="設定ダイアログ1" class="img-scr-capt" /></p>
+
+  <p>次に、左ペインの <code>Writer and Console</code> をクリックします。</p>
+
+  <ul>
+    <li>mrbwrite 欄に、先ほどと同様に mrbwrite.exe を指定します。</li>
+    <li>Port 欄に、デバイスマネージャで確認した COM番号を指定します。</li>
+    <li>Baudrate 欄に、19200を指定します。</li>
+  </ul>
+
+  <p><img src="img/20260915164234.png" alt="設定ダイアログ2" class="img-scr-capt" /></p>
+
+  <h2 id="section-3">プログラムの作成</h2>
+
+  <h3 id="section-4">新規プロジェクトの開始</h3>
+
+  <p>では、オンボードのLEDを使って、エルチカをおこなってみます。</p>
+
+  <p>まず、プログラム（プロジェクト）を保存するフォルダを作ります。
+任意の場所で良いですが、この記事では簡単のため <code>C:/rboard_proj</code> とします。
+エクスプローラ等を使って、このフォルダを作ってください。</p>
+
+  <p><img src="img/20260925181437.png" alt="プロジェクトフォルダの作成" class="img-scr-capt" /></p>
+
+  <p>IDEに戻り、メニューから <code>File</code> &gt; <code>NewProject</code> を選びます。</p>
+
+  <p><img src="img/20260925181438.png" alt="新規プロジェクトの開始" class="img-scr-capt" /></p>
+
+  <p>Setup New Project ダイアログが開きます。</p>
+
+  <ul>
+    <li>Project 欄に、<code>ElChika</code> (任意の名前) を入力します。</li>
+    <li>Create In 欄に、先ほど作った <code>C:/rboard_proj</code> を指定します。</li>
+  </ul>
+
+  <p><img src="img/20260925181903.png" alt="ダイアログ" class="img-scr-capt" /></p>
+
+  <h3 id="section-5">プログラムの入力</h3>
+
+  <p>一番左の <code>New File</code> アイコン（<img class="img-inline" src="img/file_new.png" />）をクリックし、New File ダイアログを開きます。</p>
+
+  <ul>
+    <li>FileName 欄に、<code>main</code>（任意の名前）を入力します。</li>
+  </ul>
+
+  <p><img src="img/20260925182710.png" alt="ダイアログ" class="img-scr-capt" /></p>
+
+  <p>プログラム編集エリアに、以下の内容を入力してください。</p>
+
+  <pre><code>loop {
+  leds_write( 1 )
+  sleep 1
+  leds_write( 0 )
+  sleep 1
+}
+</code></pre>
+
+  <p><code>Compile</code> アイコン（<img class="img-inline" src="img/exec_compile.png" />）をクリックし、コンパイルします。</p>
+
+  <p>コンソールエリアに <code>The process "Local Compile" exited normally.</code> と表示されればコンパイル成功です。</p>
+
+  <p><strong>注意</strong>：<code>leds_write()</code> は、オンボードLEDを操作する RBoard専用のメソッドです。</p>
+
+  <h3 id="section-6">実行</h3>
+
+  <p>次に、<code>Write</code> アイコン（<img class="img-inline" src="img/exec_write.png" />）をクリックし、ターゲットマイコンに書き込みます。</p>
+
+  <p>RBoardでは、リセット後の数秒間のみプログラムの書き込みモードとして待機する仕様です。
+（書き込み待機中は、オンボード上のLEDが素早く点滅します）</p>
+
+  <p>そのため、実機のリセットと<code>Write</code>アイコンのクリックを、以下のようにリズム良く実施する必要があります。</p>
+
+  <ol>
+    <li>RBoardのリセットスイッチを押す。</li>
+    <li>リセットスイッチを離すと同じ位のタイミングで、IDE画面の <code>Write</code>アイコンをクリックする。</li>
+  </ol>
+
+  <p>書き込みが正常に終わると、自動的にプログラムが実行されます。</p>
+
+  <h2 id="section-7">プログラムの書き換え</h2>
+
+  <p>次にプログラムを書き換えて実行してみます。</p>
+
+  <p>プログラム編集エリアを、以下の内容に書き換えてください。</p>
+
+  <pre><code>(1..15).each {|n|
+  leds_write( n )
+  puts( n )
+  sleep 2
+}
+</code></pre>
+
+  <p>書き換え終わりましたら、<code>Write</code> アイコン（<img class="img-inline" src="img/exec_write.png" />）を使って、プログラムを実行してください。</p>
+
+  <p><code>Write</code> アイコンは、内部では、保存→コンパイル→書き込み　を連続して実施しています。そのため実際にはプログラムを書き換えた後、<code>Write</code> アイコンのクリックだけで、プログラムを実行させることが可能です。</p>
+
+  <p>このプログラムでは、オンボードLEDがバイナリ順で点滅するとともに、コンソール画面にも1から15までの数字が表示されます。</p>
+
+</div>
+<!-- /item -->
+
+<aside class="menu">
+<div class="menu-inner">
+
+    <h2 class="no_toc" id="section-8">もくじ</h2>
+<ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">ダウンロードとファイル展開</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">画面の説明</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">初期設定</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">プログラムの作成</a>    <ul>
+      <li><a href="#section-4" id="markdown-toc-section-4">新規プロジェクトの開始</a></li>
+      <li><a href="#section-5" id="markdown-toc-section-5">プログラムの入力</a></li>
+      <li><a href="#section-6" id="markdown-toc-section-6">実行</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-7" id="markdown-toc-section-7">プログラムの書き換え</a></li>
+</ul>
+
+  </div>
+</aside>
+
+
+</div><!-- /contents -->
+</main>
+
+
+<footer class="footer">
+  <p class="footer-copyright">&copy; mruby/c development team.</p>
+</footer>
+</body>
+</html>

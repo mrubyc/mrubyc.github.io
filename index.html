@@ -6,7 +6,10 @@
   <title>mruby/c | Home</title>
   <meta name="description" content="mruby/c ホームページ">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="/css/common.css">
+  
+  <link rel="stylesheet" href="/css/default.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
@@ -15,7 +18,9 @@
 <body>
 <header class="header">
   <div class="header-inner">
-    <img class="logo" src="/img/mrubyc_logo.png" alt="mruby/c">
+    <a class="logo" href="/">
+      <img class="logo" src="/img/mrubyc_logo.png" alt="mruby/c">
+    </a>
     <p class="header-message">another implementation of the mruby virtual machine.</p>
   </div>
 </header>
@@ -23,20 +28,28 @@
 
 <main class="main">
 <div class="contents">
-  <div class="item">
-    <h2>mruby/c 関連ダウンロードページ</h2>
-    <p>mruby/c IDEやロゴなどのダウンロードページです。</p>
-    <p><a href="/downloads/">mruby/c 関連ツールダウンロードページ</a></p>
 
-    <h2>ソースコードリファレンス</h2>
-    <p>Doxygenによってソースコードから生成したリファレンスです。</p>
-    <ul>
-      <li><a href="/doxygen/html/">master branch</a></li>
-      <li><a href="/doxygen/html_v4/">ver 4.0.0</a></li>
-    </ul>
-  </div>
-</div>
+<!-- each contents -->
+<h2 id="mrubyc-">mruby/c 関連ダウンロードページ</h2>
 
+<p>mruby/c IDEやロゴなどがダウンロード出来ます。</p>
+
+<ul>
+  <li><a href="/downloads/">mruby/c 関連ツールダウンロードページ</a></li>
+  <li><a href="/ide-usage/">IDE の使い方（チュートリアル）</a></li>
+</ul>
+
+<h2 id="section">ソースコードリファレンス</h2>
+
+<p>Doxygenによってソースコードから生成したリファレンスです。</p>
+
+<ul>
+  <li><a href="/doxygen/html/">master branch</a></li>
+  <li><a href="/doxygen/html_v4/">ver 4.0.0</a></li>
+</ul>
+
+
+</div><!-- /contents -->
 </main>
 
 

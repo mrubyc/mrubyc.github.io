@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>mruby/c | downloads</title>
+  <title>mruby/c | Downloads</title>
   <meta name="description" content="mruby/c 関連ツールダウンロードページです。">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="/css/common.css">
+  
+  <link rel="stylesheet" href="/css/two-column.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
@@ -15,7 +18,9 @@
 <body>
 <header class="header">
   <div class="header-inner">
-    <img class="logo" src="/img/mrubyc_logo.png" alt="mruby/c">
+    <a class="logo" href="/">
+      <img class="logo" src="/img/mrubyc_logo.png" alt="mruby/c">
+    </a>
     <p class="header-message">another implementation of the mruby virtual machine.</p>
   </div>
 </header>
@@ -23,73 +28,117 @@
 
 <main class="main">
 <div class="contents">
-  <div class="item">
-    <h2 id="mrubyc">mruby/c</h2>
-    <p>GitHub の <a href="https://github.com/mrubyc/mrubyc/releases">Release ページ</a>からダウンロードします。</p>
-    <ul>
-      <li><a href="https://github.com/mrubyc/mrubyc/releases/download/release4.0.0/mrubyc-release4.0.0.tar.gz">Release 4.0.0</a> をダウンロード</li>
-      <li><a href="https://github.com/mrubyc/mrubyc/releases/download/release3.4.1/mrubyc-release3.4.1.tar.gz">Release 3.4.1</a> をダウンロード</li>
-    </ul>
 
-    <h2 id="mrubyc-ide">mruby/c IDE</h2>
-    <p>簡易統合開発環境です。</p>
-    <h3>Windows</h3>
-    <p><a href="files/mrubyc_ide_1.3.0_win.zip">mruby/c IDE 1.3.0 for Windows</a></p>
-    <ul>
-      <li>mrubyコンパイラ 3.4.0 および 4.0.0 を含みます。</li>
-      <li>mrbwrite 1.3 を含みます。</li>
-    </ul>
-    <h3>macOS</h3>
-    <p><a href="files/mrubyc_ide_1.3.0_mac.zip">mruby/c IDE 1.3.0 for macOS</a></p>
-    <ul>
-      <li>mrubyコンパイラ 3.4.0 および 4.0.0 を含みます。</li>
-      <li>mrbwrite 1.2 を含みます。</li>
-    </ul>
-    <h3>ソースコード</h3>
-    <p><a href="https://github.com/mrubyc/mrubyc_ide">https://github.com/mrubyc/mrubyc_ide</a></p>
+<!-- each contents -->
+<div class="item">
 
-    <h2 id="mruby-compiler">mrubyコンパイラ</h2>
-    <p>mrubyプログラムをコンパイルするためのツールです。</p>
-    <h3>Windows</h3>
-    <p><a href="files/mruby_compiler_4.0.0_win.zip">mruby compiler 4.0.0 for Windows</a> （mruby/c 4系列に対応）</p>
-    <p><a href="files/mruby_compiler_3.4.0_win.zip">mruby compiler 3.4.0 for Windows</a> （mruby/c 3系列に対応）</p>
-    <h3>macOS</h3>
-    <p><a href="files/mruby_compiler_4.0.0_mac.zip">mruby compiler 4.0.0 for macOS</a> （mruby/c 4系列に対応）</p>
-    <p><a href="files/mruby_compiler_3.4.0_mac.zip">mruby compiler 3.4.0 for macOS</a> （mruby/c 3系列に対応）</p>
-    <h3>ソースコード</h3>
-    <p><a href="https://github.com/mruby/mruby">https://github.com/mruby/mruby</a></p>
+  <h2 id="mrubyc">mruby/c</h2>
 
-    <h2 id="mrbwrite">mrbwrite</h2>
-    <p>コンパイル結果（RITEバイナリ）をmrbwriteプロトコルを使って書き込む為のツールです。</p>
-    <h3>Windows</h3>
-    <p><a href="files/mrbwrite_1.3.0_win.zip">mrbwrite 1.3 for Windows</a></p>
-    <h3>macOS</h3>
-    <p><a href="files/mrbwrite_1.3.0_mac.zip">mrbwrite 1.3 for macOS</a></p>
-    <h3>ソースコード</h3>
-    <p><a href="https://github.com/mrubyc/mrbwrite">https://github.com/mrubyc/mrbwrite</a></p>
+  <p>GitHub の <a href="https://github.com/mrubyc/mrubyc/releases">Release ページ</a>からダウンロードします。</p>
 
-    <h2 id="logo">mruby/c ロゴ</h2>
-    <p>mruby/cのロゴデータ（4種類）をダウンロード</p>
-    <p><a href="files/mrubyc_logo.zip">ダウンロード</a></p>
-    <h3>ライセンス</h3>
-    <p>mruby/cのロゴデータは クリエイティブ・コモンズ 表示 - 改変禁止 4.0 国際 ライセンス（CC BY-ND 4.0）で提供しています。</p>
-    <a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png"></a>
-  </div>
+  <ul>
+    <li><a href="https://github.com/mrubyc/mrubyc/releases/download/release4.0.0/mrubyc-release4.0.0.tar.gz">Release 4.0.0</a> をダウンロード</li>
+    <li><a href="https://github.com/mrubyc/mrubyc/releases/download/release3.4.1/mrubyc-release3.4.1.tar.gz">Release 3.4.1</a> をダウンロード</li>
+  </ul>
 
-  <aside class="menu">
-    <div class="menu-inner">
-      <h2>ITEM LIST</h2>
-      <ul>
-        <li><a href="#mrubyc">mruby/c</a>
-        <li><a href="#mrubyc-ide">mruby/c IDE</a>
-        <li><a href="#mruby-compiler">mrubyコンパイラ</a>
-        <li><a href="#mrbwrite">mrbwrite</a>
-        <li><a href="#logo">mruby/c ロゴ</a>
-      </ul>
-    </div>
-  </aside>
+  <h2 id="mrubyc-ide">mruby/c IDE</h2>
+
+  <p>簡易統合開発環境です。</p>
+
+  <h3 id="windows">Windows</h3>
+
+  <p><a href="files/mrubyc_ide_1.3.0_win.zip">mruby/c IDE 1.3.0 for Windows</a></p>
+
+  <ul>
+    <li>mrubyコンパイラ 3.4.0 および 4.0.0 を含みます。</li>
+    <li>mrbwrite 1.3 を含みます。</li>
+  </ul>
+
+  <h3 id="macos">macOS</h3>
+
+  <p><a href="files/mrubyc_ide_1.3.0_mac.zip">mruby/c IDE 1.3.0 for macOS</a></p>
+
+  <ul>
+    <li>mrubyコンパイラ 3.4.0 および 4.0.0 を含みます。</li>
+    <li>mrbwrite 1.2 を含みます。</li>
+  </ul>
+
+  <h3 id="section">ソースコード</h3>
+
+  <p><a href="https://github.com/mrubyc/mrubyc_ide">https://github.com/mrubyc/mrubyc_ide</a></p>
+
+  <h2 id="mruby-compiler">mrubyコンパイラ</h2>
+
+  <p>mrubyプログラムをコンパイルするためのツールです。</p>
+
+  <h3 id="windows-1">Windows</h3>
+
+  <p><a href="files/mruby_compiler_4.0.0_win.zip">mruby compiler 4.0.0 for Windows</a> （mruby/c 4系列に対応）</p>
+
+  <p><a href="files/mruby_compiler_3.4.0_win.zip">mruby compiler 3.4.0 for Windows</a> （mruby/c 3系列に対応）</p>
+
+  <h3 id="macos-1">macOS</h3>
+
+  <p><a href="files/mruby_compiler_4.0.0_mac.zip">mruby compiler 4.0.0 for macOS</a> （mruby/c 4系列に対応）</p>
+
+  <p><a href="files/mruby_compiler_3.4.0_mac.zip">mruby compiler 3.4.0 for macOS</a> （mruby/c 3系列に対応）</p>
+
+  <h3 id="section-1">ソースコード</h3>
+
+  <p><a href="https://github.com/mruby/mruby">https://github.com/mruby/mruby</a></p>
+
+  <h2 id="mrbwrite">mrbwrite</h2>
+
+  <p>コンパイル結果（RITEバイナリ）をmrbwriteプロトコルを使って書き込む為のツールです。</p>
+
+  <h3 id="windows-2">Windows</h3>
+
+  <p><a href="files/mrbwrite_1.3.0_win.zip">mrbwrite 1.3 for Windows</a></p>
+
+  <h3 id="macos-2">macOS</h3>
+
+  <p><a href="files/mrbwrite_1.3.0_mac.zip">mrbwrite 1.3 for macOS</a></p>
+
+  <h3 id="section-2">ソースコード</h3>
+
+  <p><a href="https://github.com/mrubyc/mrbwrite">https://github.com/mrubyc/mrbwrite</a></p>
+
+  <ul>
+    <li>リンク先に書き込みプロトコルの説明があります。</li>
+  </ul>
+
+  <h2 id="logo">mruby/c ロゴ</h2>
+
+  <p>mruby/cのロゴデータ（4種類）をダウンロード</p>
+
+  <p><a href="files/mrubyc_logo.zip">ダウンロード</a></p>
+
+  <h3 id="section-3">ライセンス</h3>
+
+  <p>mruby/cのロゴデータは クリエイティブ・コモンズ 表示 - 改変禁止 4.0 国際 ライセンス（CC BY-ND 4.0）で提供しています。</p>
+
+  <p><a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="CC BY-ND 4.0" /></a></p>
+
 </div>
+<!-- /item -->
 
+<aside class="menu">
+<div class="menu-inner">
+
+    <h2 class="no_toc" id="items">ITEMs</h2>
+<ul id="markdown-toc">
+  <li><a href="#mrubyc" id="markdown-toc-mrubyc">mruby/c</a></li>
+  <li><a href="#mrubyc-ide" id="markdown-toc-mrubyc-ide">mruby/c IDE</a></li>
+  <li><a href="#mruby-compiler" id="markdown-toc-mruby-compiler">mrubyコンパイラ</a></li>
+  <li><a href="#mrbwrite" id="markdown-toc-mrbwrite">mrbwrite</a></li>
+  <li><a href="#logo" id="markdown-toc-logo">mruby/c ロゴ</a></li>
+</ul>
+
+  </div>
+</aside>
+
+
+</div><!-- /contents -->
 </main>
 
 
