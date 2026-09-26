@@ -35,9 +35,9 @@
 
 .main .contents .item .img-scr-capt {
   display: block;
-  margin: 0 0 1.5em 1.5em;
+  margin: 0 0 1.5em 20px;
   border: 1px solid #ccc;
-  width: 50%;
+  width: 400px;
 }
 .main .contents .item .img-inline {
   display: inline;
