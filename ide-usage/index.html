@@ -156,13 +156,13 @@
 
   <p>プログラム編集エリアに、以下の内容を入力してください。</p>
 
-  <pre><code>loop {
-  leds_write( 1 )
-  sleep 1
-  leds_write( 0 )
-  sleep 1
-}
-</code></pre>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kp">loop</span> <span class="p">{</span>
+  <span class="n">leds_write</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+  <span class="n">leds_write</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
 
   <p><code>Compile</code> アイコン（<img class="img-inline" src="img/exec_compile.png" />）をクリックし、コンパイルします。</p>
 
@@ -192,12 +192,12 @@
 
   <p>プログラム編集エリアを、以下の内容に書き換えてください。</p>
 
-  <pre><code>(1..15).each {|n|
-  leds_write( n )
-  puts( n )
-  sleep 2
-}
-</code></pre>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">15</span><span class="p">).</span><span class="nf">each</span> <span class="p">{</span><span class="o">|</span><span class="n">n</span><span class="o">|</span>
+  <span class="n">leds_write</span><span class="p">(</span> <span class="n">n</span> <span class="p">)</span>
+  <span class="nb">puts</span><span class="p">(</span> <span class="n">n</span> <span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">2</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
 
   <p>書き換え終わりましたら、<code>Write</code> アイコン（<img class="img-inline" src="img/exec_write.png" />）を使って、プログラムを実行してください。</p>
 
