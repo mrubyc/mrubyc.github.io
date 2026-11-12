@@ -111,3 +111,48 @@ img {
     margin: 0 10px 0 10px;
   }
 }
+
+
+/*
+  コードブロックのラッパー
+*/
+.code-block-wrapper {
+  position: relative;
+}
+
+/* コピーボタン本体 */
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0; /* 通常時は隠す（常時表示したい場合は 1 に変更） */
+  transition: opacity 0.2s, background-color 0.2s;
+  z-index: 10;
+}
+
+/* コードブロックにホバーした時だけボタンを表示 */
+.code-block-wrapper:hover .copy-code-button,
+.copy-code-button:focus {
+  opacity: 1;
+}
+
+.copy-code-button:hover {
+  background-color: #fff;
+  border-color: #999;
+}
+
+/* コピー完了時のスタイル */
+.copy-code-button.copied {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  opacity: 1;
+}
